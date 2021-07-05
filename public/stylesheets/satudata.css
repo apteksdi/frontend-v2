@@ -1,0 +1,341 @@
+a { text-decoration:none !important; color: #6d6e6d; }
+.featured { background-image:url('https://data.go.id/assets/images/hero.png'); height:80vh; min-height: 520px; background-size:cover; }
+.featured-pad { padding-top:250px; padding-bottom:70px; }
+.clearfix { margin-bottom: 20px; }
+.wow { background: #f6f6f6; }
+.wow-pad { padding-top:50px; padding-bottom:50px; }
+.wow-footer { padding-top:10px; padding-bottom:50px; }
+.wow-mudah { height:200px; }
+.wow-middle { margin-top:auto; margin-bottom:auto;}
+.t-right { text-align: right; }
+.t-center { text-align:center; }
+.f-right { float:right; }
+.w-100 { width:100%; }
+.e-logo { height: 60px; margin: 20px 0px 0px 15px !important; }
+body { background-color: #f8f9fa !important; }
+.bg-white { background-image: #ffffff !important; }
+.no-bottompad { margin-bottom:0px; color: #1a0dab; }
+.no-linkgreen { color:#006621; }
+
+/* form feedback */
+a .gov-link {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+
+ 
+/* Button colors */
+.btn.btn-white {
+    background: #ffffff;
+    color: #666666;
+    border: 1px solid #dddddd;
+}
+
+.btn.btn-white:hover,
+.btn.btn-white:focus,
+.btn.btn-white.active,
+.btn.btn-white:active {
+    background: #f7f7f7;
+    color: #666666;
+}
+
+.btn.btn-grey {
+    background: #eeeeee;
+    color: #666666;
+    border: 1px solid #d5d5d5;
+}
+
+.btn.btn-grey:hover,
+.btn.btn-grey:focus,
+.btn.btn-grey.active,
+.btn.btn-grey:active {
+    background: #d5d5d5;
+    color: #999;
+}
+
+.btn.btn-black {
+    color: #ffffff;
+    background: #666666;
+    border: 1px solid #4d4d4d;
+}
+
+.btn.btn-black:hover,
+.btn.btn-black:focus,
+.btn.btn-black.active,
+.btn.btn-black:active {
+    background: #4d4d4d;
+    color: #ffffff;
+}
+
+.btn.btn-red {
+    color: #ffffff;
+    background: #ed5441;
+    border: 1px solid #e52d16;
+}
+
+.btn.btn-red:hover,
+.btn.btn-red:focus,
+.btn.btn-red.active,
+.btn.btn-red:active {
+    color: #ffffff;
+    background: #e52d16;
+}
+
+.btn.btn-redsatu {
+    color: #ffffff;
+    background: #c3151c;
+    border: 1px solid #c3151c;
+    vertical-align: center;
+}
+
+.btn.btn-redsatu:hover,
+.btn.btn-redsatu:focus,
+.btn.btn-redsatu.active,
+.btn.btn-redsatu:active {
+    color: #ffffff;
+    background: #A71218;
+}
+
+.btn.btn-green {
+    color: #ffffff;
+    background: #51d466;
+    border: 1px solid #30c247;
+}
+
+.btn.btn-green:hover,
+.btn.btn-green:focus,
+.btn.btn-green.active,
+.btn.btn-green:active {
+    background: #30c247;
+    color: #ffffff;
+}
+
+.btn.btn-lblue {
+    color: #ffffff;
+    background: #32c8de;
+    border: 1px solid #1faabe;
+}
+
+.btn.btn-lblue:hover,
+.btn.btn-lblue:focus,
+.btn.btn-lblue.active,
+.btn.btn-lblue:active {
+    background: #1faabe;
+    color: #ffffff;
+}
+
+.btn.btn-blue {
+    color: #ffffff;
+    background: #609cec;
+    border: 1px solid #3280e7;
+}
+
+.btn.btn-blue:hover,
+.btn.btn-blue:focus,
+.btn.btn-blue.active,
+.btn.btn-blue:active {
+    background: #3280e7;
+    color: #ffffff;
+}
+
+.btn.btn-orange {
+    color: #ffffff;
+    background: #f8a841;
+    border: 1px solid #f69110;
+}
+
+.btn.btn-orange:hover,
+.btn.btn-orange:focus,
+.btn.btn-orange.active,
+.btn.btn-orange:active {
+    background: #f69110;
+    color: #ffffff;
+}
+
+.btn.btn-yellow {
+    background: #fcd419;
+    color: #ffffff;
+    border: 1px solid #dfb803;
+}
+
+.btn.btn-yellow:hover,
+.btn.btn-yellow:focus,
+.btn.btn-yellow.active,
+.btn.btn-yellow:active {
+    background: #dfb803;
+    color: #ffffff;
+}
+
+.btn.btn-purple {
+    background: #cb79e6;
+    color: #ffffff;
+    border: 1px solid #ba4ede;
+}
+
+.btn.btn-purple:hover,
+.btn.btn-purple:focus,
+.btn.btn-purple.active,
+.btn.btn-purple:active {
+    background: #ba4ede;
+    color: #ffffff;
+}
+
+.btn.btn-rose {
+    background: #ff61e7;
+    color: #ffffff;
+    border: 1px solid #ff2edf;
+}
+
+.btn.btn-rose:hover,
+.btn.btn-rose:focus,
+.btn.btn-rose.active,
+.btn.btn-rose:active {
+    background: #ff2edf;
+    color: #ffffff;
+}
+
+.btn.btn-brown {
+    background: #d08166;
+    color: #ffffff;
+    border: 1px solid #c4613f;
+}
+
+.btn.btn-brown:hover,
+.btn.btn-brown:focus,
+.btn.btn-brown.active,
+.btn.btn-brown:active {
+    background: #c4613f;
+    color: #ffffff;
+}
+
+/* Label */
+.label {
+    border-radius: 2px;
+    font-weight: normal;
+    padding: 3px 7px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* Label sizes */
+.label.label-xs {
+    font-size: 10px;
+    padding: 1px 5px;
+    line-height: 12px;
+}
+
+.label.label-sm {
+    font-size: 11px;
+    padding: 2px 6px;
+    line-height: 15px;
+}
+
+.label.label-lg {
+    font-size: 13px;
+    padding: 5px 9px;
+    line-height: 23px;
+}
+
+/* Label colors */
+.label.label-white {
+    color: #666666 !important;
+    background: #f7f7f7;
+}
+
+.label.label-grey {
+    color: #666666 !important;
+    background: #eeeeee;
+}
+
+.label.label-black {
+    color: #ffffff;
+    background: #666666;
+}
+
+.label.label-red {
+    color: #ffffff;
+    background: #ed5441;
+}
+
+.label.label-green {
+    color: #ffffff;
+    background: #51d466;
+}
+
+.label.label-lblue {
+    color: #ffffff;
+    background: #32c8de;
+}
+
+.label.label-blue {
+    color: #ffffff;
+    background: #609cec;
+}
+
+.label.label-orange {
+    color: #ffffff;
+    background: #f8a841;
+}
+
+.label.label-yellow {
+    background: #fcd419;
+    color: #ffffff;
+}
+
+.label.label-purple {
+    background: #cb79e6;
+    color: #ffffff;
+}
+
+.label.label-rose {
+    background: #ff61e7;
+    color: #ffffff;
+}
+
+.label.label-brown {
+    background: #d08166;
+    color: #ffffff;
+}
+
+#wow-toolkit{ height:700px; overflow-y:scroll;}
+.navbar-nav > li {
+  float: left;
+  position: relative;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-collapse, .navbar-collapse .dropdown-item {
+    text-align:center;
+}
+.dropdown-menu {
+    justify-content: center;
+    text-align:center;
+    border:0px;
+    margin-left:-50px;
+    margin-right: -40px;
+ }
+.navbar-light .navbar-nav .active a::after {
+  border-bottom: 3px solid #ed4646;
+  bottom: -10px;
+  margin-bottom: 10px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.card { margin-right: 20px; }
+.card img { height: 180px; position: absolute; }
+.card h4 { line-height: 1.5em; height: 3em; overflow: hidden; text-overflow: ellipsis; width: 100%; position: relative; margin-top: 170px; font-size: 2vw;}
+.card small { font-size:1vw; }
+.card-body { margin-left: -10px; }
+.cari .text { padding-top: 10%; text-align: right; }
+.cari img { height: 300px; margin-bottom: 40px; margin-top: 30px; }
+.dukung .text { padding-top: 5%; }
+.dukung img{ height:230px; margin-bottom: 30px;margin-top: 30px; }
+button { margin-top: 12px; }
+button svg { padding-bottom: 3px; }
+.mobile { justify-content: center; padding-top: 5%; text-align: center; }
+#toolbar-container {visibility:hidden !important; display:none !important;}

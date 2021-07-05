@@ -123,6 +123,16 @@ module.exports = function () {
     })
   })
 
+  router.get('/about', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('about.html', {
+      title: 'Satu Data Indonesia',
+      description: 'Satu Data Indonesia (SDI) merupakan kebijakan tata kelola data pemerintah yang bertujuan untuk menciptakan data berkualitas, mudah diakses, dan dapat dibagipakaikan antar Instansi Pusat serta Daerah. Kebijakan ini tertuang dalam Peraturan Presiden no. 39 tahun 2019 tentang Satu Data Indonesia. Melalu SDI, seluruh data pemerintah dan data instansi lain yang terkait dapat bermuara di Portal Satu Data Indonesia (data.go.id). Portal Satu Data Indonesia merupakan portal resmi data terbuka Indonesia yang dikelola oleh Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian Perencanaan Pembangunan Nasional / Bappenas. Melalui Portal Satu Data Indonesia, kami berupaya penuh untuk memperbaiki tata kelola data demi terwujudnya transparansi dan akuntabilitas pemerintah, serta mendukung pembangunan nasional.',
+      collections,
+      slug: 'about'
+    })
+  })
+
   router.get('/collections/:collectionName',
     param(['collectionName']).customSanitizer(xssSanitize), async (req, res) => {
     // Get collection details
@@ -266,8 +276,8 @@ module.exports = function () {
   router.get('/organization', async (req, res, next) => {
     const collections = await Model.getOrganizations()
     res.render('collections-home.html', {
-      title: 'Organizations',
-      description: 'CKAN Organizations are used to create, manage and publish collections of datasets. Users can have different roles within an Organization, depending on their level of authorisation to create, edit and publish.',
+      title: 'Daftar Instansi',
+      description: 'Halaman ini menampilkan Daftar Instansi Pusat dan Daerah yang telah terkoneksi dengan Portal Satu Data Indonesia.',
       collections,
       slug: 'organization'
     })

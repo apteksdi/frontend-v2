@@ -15,8 +15,12 @@
     {% endif %}
     <link rel="stylesheet" media="screen" href="/static/stylesheets/app.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
 
+  <style>
+    body, p, h1, h2 { font-family: 'Montserrat', sans-serif; }
+  </style>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script id="ga-gtag" async></script>
 
@@ -28,7 +32,9 @@
         gtag('config', '{{ $GA_ID }}');
     </script>
   </head>
+
   <body class="{% block bodyclass %}{{bodyclass}}{% endblock %}">
+    
     <!-- Page header -->
     <div class="navbar navbar-default">
       <div class="container">
@@ -39,9 +45,8 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="main-logo pull-left" href="/">
-              <img class="img-responsive" src="/static/img/datahub-cube-edited.svg">
-            </a>
+            
+            <a href="/"><img src="/static/img/Logo Satu Data Indonesia.png" style="height: 55px;"></a>
           </div>
           <!--
           <div class="nav navbar-nav searchbox">
@@ -55,36 +60,20 @@
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="/about">About</a>
+                <a href="/search" class="find-data join-link">Dataset</a>
               </li>
               <li>
-                <a href="/news">News</a>
+                <a href="/organization">Instansi</a>
               </li>
               <li>
-                <a href="/search" class="find-data join-link">Find data</a>
+                <a href="/news">Berita</a>
               </li>
               <li>
-                <a href="/collections">Collections</a>
-              </li>
-              <li>
-                <a href="/requests">Requests</a>
-              </li>
-              <li>
-                <a href="/docs">Docs</a>
-              </li>
-              <li>
-                <a href="/pricing">Pricing</a>
-              </li>
-              <li>
-                <a href="/download">Tools</a>
-              </li>
-              <li>
-                <a href="https://gitter.im/datahubio/chat" class="chat" target="_blank">Chat</a>
+                <a href="/about">Tentang</a>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
+    </div>
     </div>
     <!-- End of page header -->
 
@@ -100,74 +89,58 @@
 
     {% block content %}{{content}}{% endblock %}
 
-
     <!-- Footer -->
     {% block footer %}
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-3">
-                    <img class="img-responsive" src="/static/img/datahub-cube-edited.svg" width=60>
-                    <br/>
-                    <p>At Datahub, we provide various solutions to Publish and Deploy your Data with power and simplicity. Datahub is the fastest way for individuals, teams and organizations to publish, deploy and share their data.</p>
-                </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-12 col-sm-12 col-xs-12 col-lg-1 col-md-1"></div>
+                <a href="https://www.bappenas.go.id"><img src="https://www.bappenas.go.id/themes/bappenas_newlogo/img/logo_color.png"></center></a><br/>
+                  <br/>
+              </div>
 
-                <div class="col-sm-3 col-md-2 col-md-offset-1">
-                    <label>Links</label>
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
+              <div class="col-sm-3 col-md-2 col-md-offset-1">
+                  <label>Links</label>
+                  <ul>
+                      <li>
+                          <a href="https://twitter.com/datagoid"><i class="fab fa-twitter fa-2x"></i></a> &nbsp;&nbsp;&nbsp;
+                          <a target="_blank" href="https://www.instagram.com/data.go.id"><i class="fab fa-instagram fa-2x"></i></a> &nbsp; &nbsp;&nbsp;
+                          <a target="_blank" href="https://www.youtube.com/channel/UCTeFgXSoFZH3AkjK2b22X_w"><i class="fab fa-youtube fa-2x"></i></a>
                         </li>
-                        <li>
-                            <a href="/docs/terms-of-service">Terms of Service</a>
-                          </li>
-                        <li>
-                            <a href="/docs/privacy">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="http://docs.datahub.io/developers/api/">API</a>
-                        </li>
-                        <li>
-                            <a href="/news">News</a>
-                        </li>
-                        <li>
-                            <a href="https://old.datahub.io" target="_blank">Old DataHub</a>
-                        </li>
-                    </ul>
-                </div>
+                  </ul>
+              </div>
 
-                <div class="col-sm-2">
-                    <label>Support</label>
-                    <ul>
-                        <li>
-                            <a href="/requests">Request Data</a>
-                        </li>
-                        <li>
-                            <a href="https://gitter.im/datahubio/chat">Chat</a>
-                        </li>
-                        <li>
-                            <a href="/docs/faq">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 col-md-2 col-md-offset-1">
-                    <label>Contact</label>
-                    <ul>
-                        <li>
-                            <a href="mailto:support@datahub.io">support@datahub.io</a>
-                        </li>
-                        <!-- <li>
-                            <a href="#">+44 xxx xxxx</a>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+              <div class="col-sm-2">
+                  <label>Dukungan</label>
+                  <ul>
+                      <li>
+                          <a href="/requests">Request Data</a>
+                      </li>
+                      <li>
+                          <a href="https://gitter.im/datahubio/chat">Chat</a>
+                      </li>
+                      <li>
+                          <a href="/docs/faq">FAQ</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-sm-3 col-md-2 col-md-offset-1">
+                  <label>Kontak</label>
+                  <ul>
+                      <li>
+                          <a href="mailto:sekretariat.satudataindonesia@gmail.com">sekretariat.satudataindonesia@gmail.com</a>
+                      </li>
+                      <!-- <li>
+                          <a href="#">+44 xxx xxxx</a>
+                      </li> -->
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
     {% endblock %}
     <!-- end of footer -->
 
     {% block scripts %}{% endblock %}
-
   </body>
 </html>
