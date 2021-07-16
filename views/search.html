@@ -8,6 +8,17 @@ Dataset
 {% block bodyclass %}search{% endblock %}
 
 {% block content %}
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Dataset</li>
+    </ol>
+  </nav>  
+</div>
+
+<!--conten-->
 <section class="search-page">
   <div class="container">
     <div class="inner-container">
@@ -35,7 +46,6 @@ Dataset
                   <div class="col-sm-3">
                     <button class="btn btn-primary" type="submit">Search</button>
                   </div>
-
                 </form>
               </div>
 

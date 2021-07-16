@@ -116,8 +116,8 @@ module.exports = function () {
   router.get('/collections', async (req, res, next) => {
     const collections = await Model.getCollections()
     res.render('collections-home.html', {
-      title: 'Dataset Collections',
-      description: 'Catalogue of datasets for a particular project or team, or on a particular theme, or as a very simple way to help people find and search your own published datasets.',
+      title: 'Katalog Data',
+      description: 'Beberapa Katalog Data dalam portal ini telah disederhanakan agar mempermudah pencarian data maupun dataset.',
       collections,
       slug: 'collections'
     })
@@ -275,7 +275,7 @@ module.exports = function () {
 
   router.get('/organization', async (req, res, next) => {
     const collections = await Model.getOrganizations()
-    res.render('collections-home.html', {
+    res.render('organization-home.html', {
       title: 'Daftar Instansi',
       description: 'Halaman ini menampilkan Daftar Instansi Pusat dan Daerah yang telah terkoneksi dengan Portal Satu Data Indonesia.',
       collections,

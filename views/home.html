@@ -7,15 +7,15 @@ Beranda | Satu Data Indonesia
 {% block bodyclass %}home{% endblock %}
 
 {% block content %}
-
+<div class="container">
 <div class="rowss text-center"></div>
-<section class="featured" style="background-image: url('/static/img/hero.png') !important;">
+<section class="featured">
     <div class="dgu-top-non-content">
         <div class="dgu-top-non-content__inner">
             <div id="dgu-phase-banner" class="phase-banner">
-                <p style="background-color: black; padding: 2px 0px 2px 0px;">
-                    <strong class="phase-tag" style="font-size: 23px; color: #fff; padding: 0px 15px 0px 0px;">BETA</strong>
-                    <span style="color: #fff;">Situs ini dalam masa pengembangan – mohon untuk mengisi form <a class="govuk-link" style="color: #ffff00;" href="https://forms.gle/BYaygUWuZDD89PgZ9">feedback</a> untuk pengembangan portal yang lebih baik
+                <p>
+                    <strong class="phase-tag">BETA</strong>
+                    <span>Situs ini dalam masa pengembangan – mohon untuk mengisi form <a class="govuk-link" href="https://forms.gle/BYaygUWuZDD89PgZ9">feedback</a> untuk pengembangan portal yang lebih baik
                      </span>
                 </p>
             </div>
@@ -23,45 +23,34 @@ Beranda | Satu Data Indonesia
     </div>
 </section>
 </div>
+</div>
 
 <!-- Jumbotron main -->
-<div class="container">
-  <div class="inner_container home-banner">
-    <div class="jumbotron jumbotron-primary">
-      <div class="row demo">
-
-                <div class="col-md-6">
-            <div class="left-sec">
-                <h1>Data Indonesia <br> Dalam <span>Satu</span> Portal</h1>
-                <p>Temukan data Pemerintah dengan mudah!</p>
-
-                <!-- Search -->
-                <section class="similar-search hidden-xs hidden-sm">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <!-- searchbox -->
-                            <form class="search-form form form-inline" class="input-group col-xs-12" action="/search" method="GET">
-                            <div class="col-sm-8 pad-none">
-                                <input type="text" class="form-control input-lg" placeholder="Search ..." name="q" required />
-                            </div>
-                            <div class="col-sm-4">
-                                <button class="btn btn-primary" type="submit">Search Datasets</button>
-                            </div>
-
-                            </form>
-                            <!-- search box ended -->
-                        </div>
-                    </div>
-                </section>
-                <!-- end of search -->
-
-
-                <a class="btn btn-primary btn-orange visible-xs visible-sm" href="/search">Search Free Datasets</a>
-            </div>
-        </div>
+<div class="rowss">
+  <section class="featured_banner">
+      <div class="container featured-pad">
+          <div class="row">
+              <div class="col-md-7">
+              <h1>Data Indonesia <br>Dalam Satu Portal</h1>
+              <p>Temukan data Pemerintah dengan mudah!</p>
+                <form method="GET" action="/search">
+                    <input type="hidden" name="_token" value="UYIoqUpiy5mNAXCwrZAMmkGmoICmTkac9Zvf0xKh">	    
+                        <div id="custom-search-input">
+                        <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" name="q" placeholder="Masukan kata kunci pencarian">
+                        <span class="input-group-btn">
+                        <button class="btn btn-lg" type="submit">
+                    <i class="fas fa-search"></i>
+                        </button>
+                      </span>
+                  </div>
+              </div>
+              </form>
+              </div>
+              <div class="col-md-5"></div>
+          </div>
       </div>
-    </div>
-  </div>
-</div><!-- End of jumbotron main -->
-
+  </section>
+</div>
+  
 {% endblock %}

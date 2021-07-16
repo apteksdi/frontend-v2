@@ -5,9 +5,23 @@
 {% block bodyclass %}blog{% endblock %}
 
 {% block content %}
+<style>
+  
+</style>
+
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Berita</li>
+    </ol>
+  </nav>  
+</div>
+
 <!-- blog home page test placeholder -->
 <section class="blog-page">
-  <div class="container">
+  <!--<div class="container">
 
     <div class="inner_container">
       {% for post in posts %}
@@ -25,33 +39,97 @@
       {% endfor %}
     </div>
 
+  </div>-->
+
+  <!-- CARD NEWS -->
+  <div class="container" id="content-berita">
+    <div class="row" id="row-berita">
+      <div class="col">
+        <div class="card">
+          <a href="http://114.5.121.197/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan"><img src="http://114.5.121.197:5000/uploads/page_images/2021-07-13-110209.061990IMG0434.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://114.5.121.197/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan"><h5 class="card-title">PERPRES SATU DATA DIYAKINI BISA JADI SOLUSI PERMASALAHAN TATA KELOLA DATA DI MEDAN</h5></a>
+            <p class="card-text">Pemerintah Kota Medan meyakini Peraturan Presiden Nomor 39 tahun 2019 tentang Satu Data Indonesia dapat menjadi solusi...</p>
+            <a href="http://114.5.121.197/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a href="http://114.5.121.197/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy"><img src="http://114.5.121.197:5000/uploads/page_images/2021-07-14-093757.628631IMG1102.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://114.5.121.197/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy"><h5 class="card-title">IMPLEMENTASI SATU DATA INDONESIA DORONG EFISIENSI BANTUAN SOSIAL DI PROVINSI DIY</h5></a>
+            <p class="card-text">Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian PPN/Bappenas melaksanakan Kunjungan Kerja Satu Data Indonesia...</p>
+            <a href="http://114.5.121.197/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a href="http://114.5.121.197/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi"><img src="http://114.5.121.197:5000/uploads/page_images/2021-07-14-095028.346615IMG2022.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://114.5.121.197/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi"><h5 class="card-title">SEKRETARIAT SATU DATA INDONESIA INTEGRASIKAN DATA UMKM KOTA BUKITTINGGI KE PORTAL SDI</h5></a>
+            <p class="card-text">Program Pemulihan Ekonomi Nasional (PEN) yang diharapkan dapat menyelamatkan perekonomian Indonesia dari dampak wabah...</p>
+            <a href="http://114.5.121.197/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="card">
+          <a href="http://114.5.121.197/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi"><img src="http://114.5.121.197:5000/uploads/page_images/2021-07-14-095918.908309IMG0168.jpg" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://114.5.121.197/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi"><h5 class="card-title">PEMBAHASAN RANCANGAN PERMEN ORGANISASI DAN TATA KERJA SDI</h5></a>
+            <p class="card-text">Dalam rangka memenuhi amanah yang tertuang pada Peraturan Presiden no. 39 tahun 2019 tentang Satu Data Indonesia...</p>
+            <a href="http://114.5.121.197/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+    <div class="col">
+        <div class="card">
+          <a href="http://114.5.121.197/sosialisasi-satu-data-indonesia-2020"><img src="http://114.5.121.197:5000/uploads/page_images/2021-07-14-101540.448937Bp.-Suharso-Monoarfa-Menteri-PPN.jpg" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://114.5.121.197/sosialisasi-satu-data-indonesia-2020"><h5 class="card-title">SOSIALISASI SATU DATA INDONESIA 2020</h5></a>
+            <p class="card-text">Sekretariat Satu Data Indonesia menggelar Sosialisasi Satu Data Indonesia 2020 secara virtual pada tanggal 3-4 Agustus lalu. Acara yang...</p>
+            <a href="http://114.5.121.197/sosialisasi-satu-data-indonesia-2020" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+          <a href="http://114.5.121.197/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan"><img src="http://114.5.121.197:5000/uploads/page_images/2021-07-14-103058.996042IMG0558.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://114.5.121.197/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan"><h5 class="card-title">PERCEPATAN SATU DATA INDONESIA, PORTAL SATU DATA KOTA MEDAN</h5></a>
+            <p class="card-text">Manajer Bidang Aplikasi dan Teknologi Sekretariat Satu Data Indonesia (SDI) tingkat Pusat, Epaphras Ericson...</p>
+            <a href="http://114.5.121.197/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+    </div>
   </div>
+
   <!-- Subscribe Form -->
   <div class="subscribe-form text-center"  id="form-for-blog">
-  <div class="row">
-  <div class="col-sm-4 col-sm-offset-4">
-  <form action="" method="POST">
-      <input type="hidden" name="u" value="d7c1b37384908cd31dbe44d77">
-      <input type="hidden" name="id" value="97878f666d">
-      <div id="mergeTable" class="mergeTable">
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <form action="" method="POST">
+        <input type="hidden" name="u" value="d7c1b37384908cd31dbe44d77">
+        <input type="hidden" name="id" value="97878f666d">
+        <div id="mergeTable" class="mergeTable">
           <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
               <h3>Subscribe</h3>
               <div class="field-group form-group">
-                  <input type="email" class="form-control  custom-input" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Enter Your Email" required  >
-
-
+                  <input type="email" class="form-control  custom-input" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Email Anda..." required  >
               </div>
           </div>
-      </div>
+        </div>
 
-      <div class="submit_container clear">
+        <div class="submit_container clear">
           <input type="submit" class="formEmailButton btn btn-lg btn-primary" name="submit" value="Subscribe">
-      </div>
-      <input type="hidden" name="ht" value="7e3c30f92918a0476227f6e94f3fe76633002feb:MTUyNTg0Nzk0My44ODk=">
-      <input type="hidden" name="mc_signupsource" value="hosted">
-  </form>
+        </div>
+        <input type="hidden" name="ht" value="7e3c30f92918a0476227f6e94f3fe76633002feb:MTUyNTg0Nzk0My44ODk=">
+        <input type="hidden" name="mc_signupsource" value="hosted">
+      </form>
+    </div>
+    </div>
   </div>
-  </div>
-  </div>
+
 </section>
 {% endblock %}

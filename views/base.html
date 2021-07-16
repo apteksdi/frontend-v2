@@ -13,14 +13,11 @@
       <link rel="stylesheet" media="screen" href="https://rawcdn.githack.com/datopian/datapackage-views-js/681e1ff21a0daee03e8e81ad0ddc7c8bf682aee9/dist/css/main.css">
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css">
     {% endif %}
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/satudata.css">
     <link rel="stylesheet" media="screen" href="/static/stylesheets/app.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <style>
-    body, p, h1, h2 { font-family: 'Montserrat', sans-serif; }
-  </style>
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script id="ga-gtag" async></script>
 
@@ -32,9 +29,7 @@
         gtag('config', '{{ $GA_ID }}');
     </script>
   </head>
-
   <body class="{% block bodyclass %}{{bodyclass}}{% endblock %}">
-    
     <!-- Page header -->
     <div class="navbar navbar-default">
       <div class="container">
@@ -45,7 +40,6 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            
             <a href="/"><img src="/static/img/Logo Satu Data Indonesia.png" style="height: 55px;"></a>
           </div>
           <!--
@@ -60,7 +54,13 @@
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li>
+                <a href="/">Beranda</a>
+              </li>
+              <li>
                 <a href="/search" class="find-data join-link">Dataset</a>
+              </li>
+              <li>
+                <a href="/collections">Katalog</a>
               </li>
               <li>
                 <a href="/organization">Instansi</a>
@@ -73,7 +73,8 @@
               </li>
             </ul>
           </div>
-    </div>
+        </div>
+      </div>
     </div>
     <!-- End of page header -->
 
@@ -91,53 +92,57 @@
 
     <!-- Footer -->
     {% block footer %}
-    <footer class="footer">
+        <!-- Site footer -->
+    <footer class="site-footer">
       <div class="container">
-          <div class="row">
-              <div class="col-12 col-sm-12 col-xs-12 col-lg-1 col-md-1"></div>
-                <a href="https://www.bappenas.go.id"><img src="https://www.bappenas.go.id/themes/bappenas_newlogo/img/logo_color.png"></center></a><br/>
-                  <br/>
-              </div>
-
-              <div class="col-sm-3 col-md-2 col-md-offset-1">
-                  <label>Links</label>
-                  <ul>
-                      <li>
-                          <a href="https://twitter.com/datagoid"><i class="fab fa-twitter fa-2x"></i></a> &nbsp;&nbsp;&nbsp;
-                          <a target="_blank" href="https://www.instagram.com/data.go.id"><i class="fab fa-instagram fa-2x"></i></a> &nbsp; &nbsp;&nbsp;
-                          <a target="_blank" href="https://www.youtube.com/channel/UCTeFgXSoFZH3AkjK2b22X_w"><i class="fab fa-youtube fa-2x"></i></a>
-                        </li>
-                  </ul>
-              </div>
-
-              <div class="col-sm-2">
-                  <label>Dukungan</label>
-                  <ul>
-                      <li>
-                          <a href="/requests">Request Data</a>
-                      </li>
-                      <li>
-                          <a href="https://gitter.im/datahubio/chat">Chat</a>
-                      </li>
-                      <li>
-                          <a href="/docs/faq">FAQ</a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="col-sm-3 col-md-2 col-md-offset-1">
-                  <label>Kontak</label>
-                  <ul>
-                      <li>
-                          <a href="mailto:sekretariat.satudataindonesia@gmail.com">sekretariat.satudataindonesia@gmail.com</a>
-                      </li>
-                      <!-- <li>
-                          <a href="#">+44 xxx xxxx</a>
-                      </li> -->
-                  </ul>
-              </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6></h6>
+            <p class="text-justify">Sekretariat Satu Data Indonesia</p>
+            <p class="text-justify">Jalan Taman Suropati No.2 Jakarta 10310</p>
+            <p class="text-justify">Telp. 021-31936207 Fax 021-3145374</p>
+            <a href="https://www.bappenas.go.id"><img src="https://www.bappenas.go.id/themes/bappenas_newlogo/img/logo_color.png"></a><br/>
           </div>
+
+          
+          <div class="col-xs-6 col-md-3">
+            <h6>KATEGORI</h6>
+            <ul class="footer-links">
+              <li><a href="/">Data Requests</a></li>
+              <li><a href="https://docs.ckan.org/en/2.9">Developer</a></li>
+              <li><a href="/">FAQ</a></li>
+            </ul>
+          </div>
+        
+          <div class="col-xs-6 col-md-3">
+            <h6>LINKS</h6>
+            <ul class="footer-links">
+              <li><a href="mailto:support@datahub.io">Kontak Kami</a></li>
+              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="https://gitter.im/ckan/chat">Chat</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
       </div>
-  </footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021
+         <a href="https://www.bappenas.go.id">Kementerian PPN/Bappenas</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <a class="instagram" href="https://www.instagram.com/data.go.id"><i class="fab fa-instagram"></i></a>
+              <a class="twitter" href="https://twitter.com/datagoid"><i class="fab fa-twitter"></i></a>
+              <a class="youtube" href="https://www.youtube.com/channel/UCTeFgXSoFZH3AkjK2b22X_w"><i class="fab fa-youtube"></i></a>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
     {% endblock %}
     <!-- end of footer -->
 

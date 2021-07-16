@@ -5,40 +5,28 @@
 {% block bodyclass %}awesome{% endblock %}
 
 {% block content %}
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Tentang</li>
+    </ol>
+  </nav>  
+</div>
+
 <!-- collections list page test placeholder -->
 <section class="awesome-dashboard-heading">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="text-center">{{ title }}</h1>
+        <h1 class="text-center" style="font-weight: 350;">{{ title }}</h1>
         <div class="col-sm-8 col-sm-offset-2">
-            <p class="text-center">{{ description }} <br/>
+            <p class="text-justify">{{ description }} <br/>
               <span class="highlight-text"></span></p>
         </div>
 
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="data-cards">
-  <div class="container">
-
-    <div class="row">
-      {% for collection in collections %}
-      <div class="col-sm-4">
-        <div class="card-custom">
-          <div class="col-xs-2 pad-left-0 pad-right-0">
-            <img src="{{ collection.image }}">
-          </div>
-          <div class="col-xs-10">
-            <a href="/{{slug}}/{{ collection.name }}" class="title">{{ collection.title }}</a>
-            <p>{{ collection.summary }}</p>
-            <a href="/{{slug}}/{{ collection.name }}" class="view">View</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
     </div>
   </div>
 </section>
