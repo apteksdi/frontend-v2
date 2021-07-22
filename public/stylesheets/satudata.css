@@ -15,7 +15,7 @@
 
 .col-md-7 h1 {
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .col-md-7 p {
@@ -23,14 +23,16 @@
   margin-bottom: 5px;
 }
 
-.input-group {
-  background: white;
-  border-radius: 5px;
-}
-
-.form-control {
+.input-group .form-control {
   background: transparent;
   padding-top: 15px;
+  font-size: 18px;
+}
+
+
+.input-group {
+  background: #fff;
+  border-radius: 5px;
 }
 
 #custom-search-input{
