@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+
+{% block title%}Berita{% endblock %}
+
+{% block bodyclass %}blog{% endblock %}
+
+{% block content %}
+<style>
+  
+</style>
+
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Berita</li>
+    </ol>
+  </nav>  
+</div>
+
+<!-- blog home page test placeholder -->
+<section class="blog-page">
+  <!--<div class="container">
+
+    <div class="inner_container">
+      {% for post in posts %}
+      <div class="post">
+        <a href="/news/{{post.slug}}">
+          <h2>{{post.title}}</h2>
+        </a>
+        <p class="meta">
+          <i class="fa fa-calendar-o" aria-hidden="true"></i> {{post.modified}}
+        </p>
+        {{post.content | safe | truncate(100)}}
+        <p><a href="/news/{{post.slug}}">Read more</a></p>
+      </div>
+
+      {% endfor %}
+    </div>
+
+  </div>-->
+
+  <!-- CARD NEWS -->
+  <div class="container" id="content-berita">
+    <div class="row" id="row-berita">
+      <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/progress-identifikasi-data-kementerian-lembaga"><img src="/static/asset-sdi/analytic/progress-identifikasi-data.png" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/progress-identifikasi-data-kementerian-lembaga"><h5 class="card-title">PROGRESS IDENTIFIKASI DATA KEMENTERIAN/LEMBAGA</h5></a>
+            <p class="card-text">Progres pengumpulan formulir daftar data dalam kegiatan Identifikasi Daftar Data yang telah diselenggarakan oleh Sekretariat Satu Data Indonesia pada bulan April 2021, hadir 74 KL dari 87 KL...</p>
+            <a href="http://data.go.id/progress-identifikasi-data-kementerian-lembaga" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/press-release-rapat-dewan-pengarah-selasa-06-juli-2021"><img src="/static/asset-sdi/berita/2021-07-16-132635.453736Screenshot-from-2021-07-16-20-26-13.png" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/press-release-rapat-dewan-pengarah-selasa-06-juli-2021"><h5 class="card-title">PRESS RELEASE RAPAT DEWAN PENGARAH, SELASA 06 JULI 2021</h5></a>
+            <p class="card-text">Satu Data Indonesia (SDI) adalah kebijakan Tata Kelola Data Pemerintah untuk menghasilkan Data yang akurat, mutakhir, terpadu dan dapat dipertanggungjawabkan, serta mudah diakses...</p>
+            <a href="http://data.go.id/press-release-rapat-dewan-pengarah-selasa-06-juli-2021" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan"><img src="/static/asset-sdi/berita/IMG_0434.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan"><h5 class="card-title">PERPRES SATU DATA DIYAKINI BISA JADI SOLUSI PERMASALAHAN TATA KELOLA DATA DI MEDAN</h5></a>
+            <p class="card-text">Pemerintah Kota Medan meyakini Peraturan Presiden Nomor 39 tahun 2019 tentang Satu Data Indonesia dapat menjadi solusi...</p>
+            <a href="http://data.go.id/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy"><img src="/static/asset-sdi/berita/IMG_1102.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy"><h5 class="card-title">IMPLEMENTASI SATU DATA INDONESIA DORONG EFISIENSI BANTUAN SOSIAL DI PROVINSI DIY</h5></a>
+            <p class="card-text">Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian PPN/Bappenas melaksanakan Kunjungan Kerja Satu Data Indonesia...</p>
+            <a href="http://data.go.id/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi"><img src="/static/asset-sdi/berita/IMG_2022.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi"><h5 class="card-title">SEKRETARIAT SATU DATA INDONESIA INTEGRASIKAN DATA UMKM KOTA BUKITTINGGI KE PORTAL SDI</h5></a>
+            <p class="card-text">Program Pemulihan Ekonomi Nasional (PEN) yang diharapkan dapat menyelamatkan perekonomian...</p>
+            <a href="http://data.go.id/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="card">
+          <a href="http://data.go.id/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi"><img src="/static/asset-sdi/berita/IMG_0168.jpg" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi"><h5 class="card-title">PEMBAHASAN RANCANGAN PERMEN ORGANISASI DAN TATA KERJA SDI</h5></a>
+            <p class="card-text">Dalam rangka memenuhi amanah yang tertuang pada Peraturan Presiden no. 39 tahun 2019 tentang Satu Data Indonesia...</p>
+            <a href="http://data.go.id/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+    <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/sosialisasi-satu-data-indonesia-2020"><img src="/static/asset-sdi/berita/Bp. Suharso Monoarfa Menteri PPN.jpg" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/sosialisasi-satu-data-indonesia-2020"><h5 class="card-title">SOSIALISASI SATU DATA INDONESIA 2020</h5></a>
+            <p class="card-text">Sekretariat Satu Data Indonesia menggelar Sosialisasi Satu Data Indonesia 2020 secara virtual pada tanggal 3-4 Agustus lalu. Acara yang...</p>
+            <a href="http://data.go.id/sosialisasi-satu-data-indonesia-2020" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+          <a href="http://data.go.id/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan"><img src="/static/asset-sdi/berita/IMG_0558.JPG" class="card-img-top" alt="..." style="margin: 0px;"></a>
+          <div class="card-body">
+            <a href="http://data.go.id/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan"><h5 class="card-title">PERCEPATAN SATU DATA INDONESIA, PORTAL SATU DATA KOTA MEDAN</h5></a>
+            <p class="card-text">Manajer Bidang Aplikasi dan Teknologi Sekretariat Satu Data Indonesia (SDI) tingkat Pusat, Epaphras Ericson...</p>
+            <a href="http://data.go.id/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan" class="btn btn-primary" style="border-radius: 5px;">Baca Selengkapnya</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <section class="news-section">
+    <div class="container">
+     <div class="main-title-box text-center">
+                   <div class="small-title">News & Blog</div>
+                   <h2 class="big-title">Our Recent Artciles</h2>
+               </div>
+               <div class="row">
+                   <!--Single Blog Start-->
+                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
+                       <div class="news-item">
+                           <div class="news_box">
+                               <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/CKNmhMX/blog1.jpg.jpg" alt=""></div>
+                               <div class="news-content">
+                                   <div class="news_postdate">
+                                       <span>Jan 03, 2019</span>
+                                   </div>
+                                   <a href="#">
+                                       <h3>The Future of Digital Marketing</h3>
+                                   </a>
+                                   <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                   <div class="news_authorinfo">
+                                       <span><i class="fa fa-user"></i>  <a href="">Robert Tylor </a></span>
+                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (2)</a></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Single Blog End-->
+                   <!--Single Blog Start-->
+                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                       <div class="news-item active">
+                           <div class="news_box">
+                               <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/m5yGbdR/blog2.jpg" alt=""></div>
+                               <div class="news-content">
+                                   <div class="news_postdate">
+                                       <span>Nov 05, 2018</span>
+                                   </div>
+                                   <a href="#">
+                                       <h3>Successful content marketing plan </h3>
+                                   </a>
+                                   <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                   <div class="news_authorinfo">
+                                       <span><i class="fa fa-user"></i>  <a href="">Jessica keri</a></span>
+                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (1)</a></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Single Blog End-->
+                   <!--Single Blog Start-->
+                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
+                       <div class="news-item">
+                           <div class="news_box">
+                               <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/YXV3zmh/blog3.jpg" alt=""></div>
+                               <div class="news-content">
+                                   <div class="news_postdate">
+                                       <span>Dec 22, 2018</span>
+                                   </div>
+                                   <a href="#">
+                                       <h3>Our agency helps to grow creativity</h3>
+                                   </a>
+                                   <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                   <div class="news_authorinfo">
+                                       <span><i class="fa fa-user"></i>  <a href="">Brandon Auger</a></span>
+                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (2)</a></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Single Blog End-->
+                   <!--Single Blog Start-->
+                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
+                       <div class="news-item">
+                           <div class="news_box">
+                               <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/CKNmhMX/blog1.jpg" alt=""></div>
+                               <div class="news-content">
+                                   <div class="news_postdate">
+                                       <span>Dec 05, 2017</span>
+                                   </div>
+                                   <a href="#">
+                                       <h3>The Future of Digital Marketing</h3>
+                                   </a>
+                                   <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                   <div class="news_authorinfo">
+                                       <span><i class="fa fa-user"></i>  <a href="">Astley Fletcher</a></span>
+                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (1)</a></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Single Blog End-->
+                   <!--Single Blog Start-->
+                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                       <div class="news-item active">
+                           <div class="news_box">
+                               <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/m5yGbdR/blog2.jpg" alt=""></div>
+                               <div class="news-content">
+                                   <div class="news_postdate">
+                                       <span>Nov 13, 2017</span>
+                                   </div>
+                                   <a href="#">
+                                       <h3>Successful content marketing plan </h3>
+                                   </a>
+                                   <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                   <div class="news_authorinfo">
+                                       <span><i class="fa fa-user"></i>  <a href="">Nichel Benjamin</a></span>
+                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (2)</a></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Single Blog End-->
+                   <!--Single Blog Start-->
+                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
+                       <div class="news-item">
+                           <div class="news_box">
+                               <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/YXV3zmh/blog3.jpg" alt=""></div>
+                               <div class="news-content">
+                                   <div class="news_postdate">
+                                       <span>Aug 18, 2017</span>
+                                   </div>
+                                   <a href="#">
+                                       <h3>Our agency helps to grow creativity</h3>
+                                   </a>
+                                   <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                   <div class="news_authorinfo">
+                                       <span><i class="fa fa-user"></i>  <a href="">Andrew Mickel </a></span>
+                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (4)</a></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Single Blog End-->
+               </div>
+           </div>
+       </div>
+</section>
+
+
+
+
+
+
+  <!-- Subscribe Form -->
+  <div class="subscribe-form text-center"  id="form-for-blog">
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <form action="" method="POST">
+        <input type="hidden" name="u" value="d7c1b37384908cd31dbe44d77">
+        <input type="hidden" name="id" value="97878f666d">
+        <div id="mergeTable" class="mergeTable">
+          <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+              <h3>Subscribe</h3>
+              <div class="field-group form-group">
+                  <input type="email" class="form-control  custom-input" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Email Anda..." required  >
+              </div>
+          </div>
+        </div>
+
+        <div class="submit_container clear">
+          <input type="submit" class="formEmailButton btn btn-lg btn-primary" name="submit" value="Subscribe">
+        </div>
+        <input type="hidden" name="ht" value="7e3c30f92918a0476227f6e94f3fe76633002feb:MTUyNTg0Nzk0My44ODk=">
+        <input type="hidden" name="mc_signupsource" value="hosted">
+      </form>
+    </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
