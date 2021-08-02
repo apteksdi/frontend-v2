@@ -269,12 +269,6 @@
 
 
 /***** BLOG *****/ 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {}
 a,
 a:hover,
 a:focus,
@@ -444,12 +438,17 @@ margin-bottom: 60px;
   justify-content: space-around;
 }
 
+.topic-title {
+  margin: 0px;
+  color: #940709;
+}
+
 .flex-item {
-  background: white;
+  background: transparent;
   padding: 5px;
   width: 100px;
-  height: 180px;
-  margin-top: 10px;
+  height: 150px;
+  margin-top: 0px;
   
   line-height: 120px;
   color: white;
@@ -458,8 +457,13 @@ margin-bottom: 60px;
   text-align: center;
 }
 
+.flex-item, .fas {
+  color: #940709;
+}
+
 /***** ENDING FLEXBOX *****/
 
+/***** DROPDOWN LIST *****/
 /* Style The Dropdown Button */
 .dropbtn {
   background-color: #4CAF50;
@@ -506,4 +510,145 @@ margin-bottom: 60px;
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
- 
+/***** ENDING DROPDOWN LIST *****/
+
+/***** LANDING PAGE POPUP MODAL *****/
+/* Main Styles */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+#page-wrapper {
+  padding: 1.5em;
+}
+
+p.center {
+  text-align: center;
+}
+
+h11 {
+  color: #0198cc;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Modal Styles */
+#css-modal {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  z-index: 10000000;
+}
+
+#css-modal h2 {
+  color: #0198cc;
+  font-size: 2em;
+  letter-spacing: 0.02em;
+  padding: 0;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+#css-modal .css-modal-check {
+  display: none;
+  pointer-events: auto;
+}
+
+#css-modal .css-modal-check:checked ~ .css-modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#css-modal .css-modal {
+  background: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  max-width: 550px;
+  opacity: 0;
+  padding: 2.25em;
+  pointer-events: none;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal;
+  z-index: 1;
+}
+
+#css-modal .css-modal p {
+  text-align: left;
+}
+
+#css-modal .css-modal .close {
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+}
+
+#css-modal .css-modal .css-modal-btn button {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 1em;
+}
+
+#css-modal .css-modal-check:checked ~ #overlay {
+  opacity: 0.8;
+  pointer-events: auto;
+}
+
+#css-modal #overlay {
+  background: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.8s;
+}
+
+#css-modal:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.close:after {
+  color: #0198cc;
+  content: "\0058";
+  float: right;
+  font-size: 1.75em;
+}
+
+#css-modal .btn-primary {
+  color: #fff;
+  background-color: #0198cc;
+}
+
+#css-modal .btn-primary:hover {
+  background-color: #01afea;
+}
+
+#css-modal .btn {
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.75em 1.25em;
+  text-align: center;
+}
+
+/** Halaman Dataset **/

@@ -7,6 +7,21 @@ Beranda | Satu Data Indonesia
 {% block bodyclass %}home{% endblock %}
 
 {% block content %}
+
+<!-- Modal Feedback Pop Up -->
+<div id="css-modal">
+    <input id="modal" class="css-modal-check" type="checkbox" checked />
+    <div class="css-modal">
+      <label for="modal" class="close"></label>
+      <h2>Bantu Kami Untuk Melayani Anda Lebih Baik</h2>
+      <p>Situs ini dalam masa pengembangan – mohon untuk mengisi form <a class="govuk-link" href="https://forms.gle/BYaygUWuZDD89PgZ9" target='_blank'>feedback</a> untuk pengembangan portal yang lebih baik
+      </p>
+      <div class="css-modal-btn"><a href="https://forms.gle/BYaygUWuZDD89PgZ9" target='_blank'><button class="btn btn-primary btn-md">Isi Feedback Sekarang</button></a></div>
+    </div>
+    <div id="overlay"></div>
+</div> 
+
+<!-- Header Feedback -->
 <div class="container">
 <div class="rowss text-center"></div>
 <section class="featured">
@@ -35,7 +50,7 @@ Beranda | Satu Data Indonesia
               <h1>Data Indonesia <br>Dalam Satu Portal</h1>
               <p>Temukan data Pemerintah dengan mudah!</p>
                 <form method="GET" action="/search">
-                    <input type="hidden" name="_token" value="UYIoqUpiy5mNAXCwrZAMmkGmoICmTkac9Zvf0xKh">	    
+                    <input type="hidden" >	    
                         <div id="custom-search-input">
                         <div class="input-group">
                     <input type="text" class="form-control form-control-lg" name="q" placeholder="Masukan kata kunci pencarian">
@@ -57,14 +72,14 @@ Beranda | Satu Data Indonesia
 
 <!-- Topic Section -->
 <div class="topics-section">
-    <div class="container">
+    <div class="container" style="padding: 0px;">
       <div class="topics-row">
         
         <ul class="flex-container">
            
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/society.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-users"></i>
                     <h5 class="topic-title">Budaya dan Agama</h5>
                 </a>
             </li>
@@ -76,8 +91,8 @@ Beranda | Satu Data Indonesia
             </div>
 
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/finance.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-coins"></i>
                     <h5 class="topic-title">Ekonomi dan Industri</h5>
                 </a>
             </li>
@@ -91,14 +106,14 @@ Beranda | Satu Data Indonesia
                 <a href="http://data.go.id/collections/badan-usaha-milik-negara">Badan Usaha Milik Negara</a>
                 <a href="http://data.go.id/collections/investasi">Investasi</a>
                 <a href="http://data.go.id/collections/koperasi">Koperasi</a>
-                <a href="http://data.go.id/collections/usaha-kecil-dan-menengah">Usaha Kecil dan Menengah</a>
+                <a href="http://data.go.id/collections/usaha-kecil-menengah">Usaha Kecil dan Menengah</a>
                 <a href="http://data.go.id/collections/pariwisata">Pariwisata</a>
               </div>
             </div>
 
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/transport.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-bus"></i>
                     <h5 class="topic-title">Ketertiban Umum dan Keselamatan</h5>
                 </a>
             </li>
@@ -110,8 +125,8 @@ Beranda | Satu Data Indonesia
             </div>
 
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/environment.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-tree"></i>
                     <h5 class="topic-title">Lingkungan dan Sumber Daya Alam</h5>
                 </a>
             </li>
@@ -125,8 +140,8 @@ Beranda | Satu Data Indonesia
             </div>
 
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/infrastructure.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-building"></i>
                     <h5 class="topic-title">Pembangunan Daerah</h5>
                 </a>
             </li>
@@ -140,8 +155,8 @@ Beranda | Satu Data Indonesia
             </div>
 
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/economy.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-chart-line"></i>
                     <h5 class="topic-title">Pemerintahan Umum</h5>
                 </a>
             </li>
@@ -159,8 +174,8 @@ Beranda | Satu Data Indonesia
             </div>
             
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/education.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-user-graduate"></i>
                     <h5 class="topic-title">Pendidikan dan Tenaga Kerja</h5>
                 </a>
             </li>
@@ -174,8 +189,8 @@ Beranda | Satu Data Indonesia
             </div>
             
             <div class="dropdown">
-            <li class="flex-item">
-                <a href=""><img src="/static/asset-sdi/group/technology.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-laptop"></i>
                     <h5 class="topic-title">Pendukung Umum</h5>
                 </a>
             </li>
@@ -188,8 +203,8 @@ Beranda | Satu Data Indonesia
             </div>
             
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/health.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-heartbeat"></i>
                     <h5 class="topic-title">Perlindungan Sosial dan Kesehatan</h5>
                 </a>
             </li>
@@ -201,8 +216,8 @@ Beranda | Satu Data Indonesia
             </div>
 
             <div class="dropdown">
-            <li class="flex-item">
-                <a href="/"><img src="/static/asset-sdi/group/defense-shield-svgrepo-com.svg">
+            <li class="flex-item" class="navbar-toggle" data-toggle="collapse">
+                <a><i class="fas fa-lock"></i>
                     <h5 class="topic-title">Pertahanan dan Luar Negeri</h5>
                 </a>
             </li>
@@ -229,7 +244,7 @@ Beranda | Satu Data Indonesia
 
 
     <section class="core-datasets" id="core-datasets">
-        <div class="container">
+        <div class="container" id="info-sdgs">
             <div class="row">
                 <p class="info-1">Dashboard Indikator SDGS</p>
                 <div class="tableauPlaceholder" id="viz1625653747359" style="position: relative"><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardPLN&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /><param name="embed_code_version" value="3" /><param name="site_root" value="" /><param name="name" value="DashboardPLN/Dashboard1" /><param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https://public.tableau.com/static/images/Da/DashboardPLN/Dashboard1/1.png" /><param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /><param name="language" value="en-US" /></object></div>
