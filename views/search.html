@@ -8,6 +8,66 @@ Dataset
 {% block bodyclass %}search{% endblock %}
 
 {% block content %}
+
+<script>
+  $(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion'), false);
+});
+
+// Events
+$('.dropdown-container')
+	.on('click', '.dropdown-button', function() {
+        $(this).siblings('.dropdown-list').toggle();
+	})
+	.on('input', '.dropdown-search', function() {
+    	var target = $(this);
+        var dropdownList = target.closest('.dropdown-list');
+    	var search = target.val().toLowerCase();
+    
+    	if (!search) {
+            dropdownList.find('li').show();
+            return false;
+        }
+    
+    	dropdownList.find('li').each(function() {
+        	var text = $(this).text().toLowerCase();
+            var match = text.indexOf(search) > -1;
+            $(this).toggle(match);
+        });
+	})
+	.on('change', '[type="checkbox"]', function() {
+        var container = $(this).closest('.dropdown-container');
+        var numChecked = container. find('[type="checkbox"]:checked').length;
+    	container.find('.quantity').text(numChecked || 'Any');
+	});
+
+</script>
+
+
+
 <!-- breadcrumb -->
 <div class="container" id="bread-crumb">
   <nav aria-label="breadcrumb">
@@ -20,7 +80,7 @@ Dataset
 
 <!--conten-->
 <section class="search-page">
-  <div class="container" style="display: flexbox;">
+  <div class="container">
     <div class="inner-container">
       <section class="heading">
           <div class="row">
@@ -30,21 +90,16 @@ Dataset
             <div class="col-sm-9">
               <h1>Pencarian Dataset</h1>
               <p>Seluruh kumpulan data yang tersedia dalam Portal Satu Data Indonesia dapat diakses secara terbuka dan dikategorikan sebagai data publik, sehingga tidak mengandung informasi yang memuat rahasia negara, rahasia pribadi, atau hal lain sejenisnya sebagaimana diatur dalam Undang-undang nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.</p>
-           
             </div>
-          </div>
-      </section>
 
-      <div class="col-sm-8 pad-left-zero pad-right-zero">
-        <!-- Form -->
-          <section class="search-section">
+            <section class="search-section" style="margin-bottom: 0px; padding-bottom: 0px;">
               <div class="row">
                 <form class="search-form form form-inline" class="input-group col-xs-12" action="/search" method="GET">
                   <div class="col-sm-9">
-                    <input type="text" class="form-control input-lg" placeholder="Search ..." name="q" value="{{ query.q }}" autofocus/>
+                    <input type="text" class="form-control input-lg" placeholder="Masukan kata kunci pencarian" name="q" value="{{ query.q }}" autofocus/>
                   </div>
                   <div class="col-sm-3">
-                    <button class="btn btn-primary" type="submit">Search</button>
+                    <button class="btn btn-primary" type="submit">Cari</button>
                   </div>
                 </form>
               </div>
@@ -56,31 +111,156 @@ Dataset
                   </h4>
                 </div>
               </div>
-
-              <!-- list kategori instasni 
-              <div class="instansi">
-                <ul class="list-group">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                  <li class="list-group-item">A fourth item</li>
-                  <li class="list-group-item">And a fifth one</li>
-                </ul>
-              </div> -->
           </section>
-          <!-- End of Form -->
+          </div>
+      </section>
 
+      <main class="dataset-main">
+      <!-- Kategorisasi Topik & intansi -->
+        <div class="col-sm-4">
+          <div class="container-fluid" id="container-kategori-instansi">
+            <h2 id="kategori-dataset">Kategori</h2>
+            
+            <!-- Accordion -->
+              <ul id="accordion" class="accordion">
+                <li>
+                  <div class="link"><i class="fa fa-users" id="icon-topik"></i>Budaya dan Agama<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Agama</a></li>
+                    <li><a href="#">Kebudayaan</a></li>
+                    <li><a href="#">Olahraga</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-coins"></i>Ekonomi dan Industri<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="http://114.5.121.197:4000/collections/industri">Industri</a></li>
+                    <li><a href="#">Perdagangan</a></li>
+                    <li><a href="#">Pertanian</a></li>
+                    <li><a href="#">Perkebunan</a></li>
+                    <li><a href="#">Peternakan</a></li>
+                    <li><a href="#">Perikanan</a></li>
+                    <li><a href="#">Badan Usaha Milik Rakyat</a></li>
+                    <li><a href="#">Investasi</a></li>
+                    <li><a href="#">Koperasi</a></li>
+                    <li><a href="#">Usaha Kecil dan Menengah</a></li>
+                    <li><a href="#">Pariwisata</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-bus"></i>Ketertiban Umum dan Keselamatan<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Hukum</a></li>
+                    <li><a href="#">Keamanan</a></li>
+                    <li><a href="#">Hak Asasi Manusia</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-tree"></i>Lingkungan dan Sumber Daya Alam<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Pertambangan</a></li>
+                    <li><a href="#">Energi</a></li>
+                    <li><a href="#">Kehutanan</a></li>
+                    <li><a href="#">Kelautan</a></li>
+                    <li><a href="#">Lingkungan Hidup</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-building"></i>Pembangunan Daerah<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Pekerjaan Umum</a></li>
+                    <li><a href="#">Transmigrasi</a></li>
+                    <li><a href="#">Transportasi</a></li>
+                    <li><a href="#">Perumahan</a></li>
+                    <li><a href="#">Kawasan/Daerah Tertinggal</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-chart-line"></i>Pemerintahan Umum<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Dalam Negeri</a></li>
+                    <li><a href="#">Keuangan</a></li>
+                    <li><a href="#">Informasi</a></li>                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Komunikasi</a></li>
+                    <li><a href="#">Perencanaan Pembangunan Nasional</a></li>
+                    <li><a href="#">Aparatur Negara</a></li>
+                    <li><a href="#">Kesekretariatan Negara</a></li>
+                    <li><a href="#">Pertanahan</a></li>
+                    <li><a href="#">Kependudukan</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-user-graduate"></i>Pendidikan dan Tenaga Kerja<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Pendidikan</a></li>
+                    <li><a href="#">Ketenagakerjaan</a></li>
+                    <li><a href="#">Ilmu Pengetahuan</a></li>
+                    <li><a href="#">Teknologi</a></li>
+                    <li><a href="#">Pemuda</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-laptop"></i>Pendukung Umum<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Kebijakan Pemerintah</a></li>
+                    <li><a href="#">Manajemen Kegiatan</a></li>
+                    <li><a href="#">Kewilayahan</a></li>
+                    <li><a href="#">Data Dukung Lainnya</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-heartbeat"></i>Perlindungan Sosial dan Kesehatan<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="http://114.5.121.197:4000/collections/kesehatan">Kesehatan</a></li>
+                    <li><a href="#">Kesehatan</a></li>
+                    <li><a href="#">Sosial</a></li>
+                    <li><a href="#">Pemberdayaan Perempuan</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link"><i class="fa fa-lock"></i>Pertahanan dan Luar Negeri<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Pertahanan</a></li>
+                    <li><a href="#">Luar Negeri</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+          <!-- Dropdown Instansi -->
+            <h2 id="kategori-instansi">Instansi</h2>
+            <div class="list-group">
+              <input type="search" placeholder="Search states" class="dropdown-search" id="search-instansi" style="width: 340px;"/>
+              <button type="button" class="list-group-item list-group-item-action" aria-current="true">Kementerian Komunikasi dan Informatika</button>
+              <button type="button" class="list-group-item list-group-item-action">Lembaga Administrasi Negara</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Aceh Tamiang</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Bantul</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Blitar</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Bogor</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Demak</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Karanganyar</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Kendal</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Kutai Timur</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Magelang</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Pati</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Sanggu</button>
+              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Sukoharjo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8" id="page-result">
           <!-- Results -->
-          <section class="results">
-            {{ snippets.package_list_show(result.results) }}
-          </section>
+            <section class="results">
+              {{ snippets.package_list_show(result.results) }}
+            </section>
 
           <!-- Pagination -->
-          {% if result.count > 10 %}
-            {{ snippets.pagination(query.q, pages, result, 'search') }}
-          {% endif %}
+            {% if result.count > 10 %}
+              {{ snippets.pagination(query.q, pages, result, 'search') }}
+            {% endif %}
+          </div>
           <!-- end of pagination -->
-      </div>
+      </main>
     </div>
   </div>
 </section>

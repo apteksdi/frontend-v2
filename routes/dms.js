@@ -143,6 +143,16 @@ module.exports = function () {
     })
   })
 
+  router.get('/unduhan', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('unduhan.html', {
+      title: 'Unduhan Dokumen',
+      description: 'Unduhan DOkumen',
+      collections,
+      slug: 'unduhan'
+    })
+  })
+
   router.get('/collections/:collectionName',
     param(['collectionName']).customSanitizer(xssSanitize), async (req, res) => {
     // Get collection details
@@ -342,3 +352,6 @@ module.exports = function () {
 
   return router
 }
+
+
+	
