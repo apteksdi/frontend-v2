@@ -9,6 +9,7 @@ Dataset
 
 {% block content %}
 
+<!-- Accordion JS -->
 <script>
   $(function() {
 	var Accordion = function(el, multiple) {
@@ -66,9 +67,7 @@ $('.dropdown-container')
 
 </script>
 
-
-
-<!-- breadcrumb -->
+<!--breadcrumb-->
 <div class="container" id="bread-crumb">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -78,9 +77,9 @@ $('.dropdown-container')
   </nav>  
 </div>
 
-<!--conten-->
+<!--content-->
 <section class="search-page">
-  <div class="container">
+  <div class="container" style="padding-top: 0px;">
     <div class="inner-container">
       <section class="heading">
           <div class="row">
@@ -119,9 +118,9 @@ $('.dropdown-container')
       <!-- Kategorisasi Topik & intansi -->
         <div class="col-sm-4">
           <div class="container-fluid" id="container-kategori-instansi">
-            <h2 id="kategori-dataset">Kategori</h2>
             
-            <!-- Accordion -->
+            <!--Accordion-->
+            <h2 id="kategori-dataset">Kategori</h2>
               <ul id="accordion" class="accordion">
                 <li>
                   <div class="link"><i class="fa fa-users" id="icon-topik"></i>Budaya dan Agama<i class="fa fa-chevron-down"></i></div>
@@ -134,7 +133,7 @@ $('.dropdown-container')
                 <li>
                   <div class="link"><i class="fa fa-coins"></i>Ekonomi dan Industri<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="http://114.5.121.197:4000/collections/industri">Industri</a></li>
+                    <li><a href="/data/group/industri">Industri</a></li>
                     <li><a href="#">Perdagangan</a></li>
                     <li><a href="#">Pertanian</a></li>
                     <li><a href="#">Perkebunan</a></li>
@@ -211,7 +210,7 @@ $('.dropdown-container')
                 <li>
                   <div class="link"><i class="fa fa-heartbeat"></i>Perlindungan Sosial dan Kesehatan<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="http://114.5.121.197:4000/collections/kesehatan">Kesehatan</a></li>
+                    <li><a href="/data/group/kesehatan">Kesehatan</a></li>
                     <li><a href="#">Kesehatan</a></li>
                     <li><a href="#">Sosial</a></li>
                     <li><a href="#">Pemberdayaan Perempuan</a></li>
@@ -224,27 +223,58 @@ $('.dropdown-container')
                     <li><a href="#">Luar Negeri</a></li>
                   </ul>
                 </li>
-              </ul>
+              </ul> 
 
           <!-- Dropdown Instansi -->
-            <h2 id="kategori-instansi">Instansi</h2>
-            <div class="list-group">
-              <input type="search" placeholder="Search states" class="dropdown-search" id="search-instansi" style="width: 340px;"/>
-              <button type="button" class="list-group-item list-group-item-action" aria-current="true">Kementerian Komunikasi dan Informatika</button>
-              <button type="button" class="list-group-item list-group-item-action">Lembaga Administrasi Negara</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Aceh Tamiang</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Bantul</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Blitar</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Bogor</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Demak</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Karanganyar</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Kendal</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Kutai Timur</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Magelang</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Pati</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Sanggu</button>
-              <button type="button" class="list-group-item list-group-item-action">Pemerintah Kabupaten Sukoharjo</button>
-            </div>
+          <h2 id="kategori-instansi">Instansi</h2>
+          <select class="form-control select2" onChange="window.location.href=this.value">
+             <option value="">Pilih Instansi</option> 
+             <option value="pemerintah-provinsi-aceh">Pemerintah Provinsi Aceh</option> 
+             <option value="pemerintah-provinsi-jawa-tengah">Pemerintah Provinsi Jawa Tengah</option>
+             <option value="pemerintah-provinsi-kalimantan-barat">Pemerintah Provinsi Kalimantan Barat</option> 
+             <option value="pemerintah-provinsi-kalimantan-timur">Pemerintah Provinsi Kalimantan Timur</option>  
+             <option value="pemerintah-kabupaten-aceh-tamiang">Pemerintah Kabupaten Aceh Tamiang</option> 
+             <option value="pemerintah-kota-medan">Pemerintah Kota Medan</option>
+             <option value="pemerintah-kota-jambi">Pemerintah Kota Jambi</option> 
+             <option value="pemerintah-kota-bandung">Pemerintah Kota Bandung</option> 
+             <option value="pemerintah-kabupaten-cilacap">Pemerintah Kabupaten Cilacap</option> 
+             <option value="pemerintah-kabupaten-banyumas">Pemerintah Kabupaten Banyumas</option>
+             <option value="pemerintah-kabupaten-banjarnegara">Pemerintah Kabupaten Banjarnegara</option>
+             <option value="pemerintah-kabupaten-purworejo">Pemerintah Kabupaten Purworejo</option> 
+             <option value="pemerintah-kabupaten-wonosobo">Pemerintah Kabupaten Wonosobo</option>
+             <option value="pemerintah-kabupaten-magelang">Pemerintah Kabupaten Magelang</option> 
+             <option value="pemerintah-kabupaten-klaten">Pemerintah Kabupaten Klaten</option> 
+             <option value="pemerintah-kabupaten-sukoharjo">Pemerintah Kabupaten Sukoharjo</option>
+             <option value="pemerintah-kabupaten-karanganyar">Pemerintah Kabupaten Karanganyar</option> 
+             <option value="pemerintah-kabupaten-sragen">Pemerintah Kabupaten Sragen</option> 
+             <option value="pemerintah-kabupaten-rembang">Pemerintah Kabupaten Rembang</option> 
+             <option value="pemerintah-kabupaten-pati">Pemerintah Kabupaten Pati</option>
+             <option value="pemerintah-kabupaten-kudus">Pemerintah Kabupaten Kudus</option> 
+             <option value="pemerintah-kabupaten-demak">Pemerintah Kabupaten Demak</option> 
+             <option value="pemerintah-kabupaten-temanggung">Pemerintah Kabupaten Temanggung</option> 
+             <option value="pemerintah-kabupaten-kendal">Pemerintah Kabupaten Kendal</option>
+             <option value="pemerintah-kabupaten-batang">Pemerintah Kabupaten Batang</option> 
+             <option value="pemerintah-kabupaten-pekalongan">Pemerintah Kabupaten Pekalongan</option> 
+             <option value="pemerintah-kabupaten-pemalang">Pemerintah Kabupaten Pemalang</option> 
+             <option value="pemerintah-kabupaten-tegal">Pemerintah Kabupaten Tegal</option>
+             <option value="pemerintah-kota-magelang">Pemerintah Kota Magelang</option> 
+             <option value="pemerintah-kota-surakarta">Pemerintah Kota Surakarta</option>  
+             <option value="pemerintah-kota-salatiga">Pemerintah Kota Salatiga</option> 
+             <option value="pemerintah-kota-semarang">Pemerintah Kota semarang</option>
+             <option value="pemerintah-kota-tegal">Pemerintah Kota Tegal</option> 
+             <option value="pemerintah-kabupaten-bantul">Pemerintah Kabupaten Bantul</option> 
+             <option value="pemerintah-kabupaten-sleman">Pemerintah Kabupaten Sleman</option> 
+             <option value="pemerintah-kabupaten-blitar">Pemerintah Kabupaten Blitar</option>
+             <option value="pemerintah-kota-mojokerto">Pemerintah Kota Mojokerto</option> 
+             <option value="pemerintah-kabupaten-sanggau">Pemerintah Kabupaten Sanggau</option> 
+             <option value="pemerintah-kabupaten-kutai-timur">Pemerintah Kabupaten Kutai Timur</option> 
+          </select>
+        
+          <!-- Dropdown Instansi JS -->
+          <script>
+            $('.select2').select2();
+          </script>
+
           </div>
         </div>
 

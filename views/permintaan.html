@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block title%}Permintaan Data{% endblock %}
+
+{% block bodyclass %}awesome{% endblock %}
+
+{% block content %}
+<style>
+  .form-control {
+    margin-left: 10px;
+  }
+
+  #inputPassword2 {
+    width: 250px;
+  }
+
+  .form-control-plaintext {
+    border: none;
+    width: 180px;
+  }
+
+  .permintaan-data {
+    margin-bottom: 50px;
+  }
+
+  #container-permintaan {
+    text-align: center;
+    top: 50%;
+    padding: 10px;
+  }
+
+  .form-inline {
+    margin-bottom: 20px;
+  }
+
+</style>
+
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Permintaan Data</li>
+    </ol>
+  </nav>  
+</div>
+
+<!-- Permintaan Data Title -->
+<section class="news-section">
+  <div class="container" id="news-container">
+    <div class="main-title-box text-center">
+      <div class="small-title">Permintaan Data</div>
+      <h2 class="big-title">Satu Data Indonesia</h2> 
+    </div>
+  </div>
+</section>
+
+<main class="permintaan-data">
+  <div class="container" id="container-permintaan">
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="No. NIK" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Nama Lengkap" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="No. Handphone" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Instansi" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Alamat Email" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Data yang diminta" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Tujuan Permintaan Data" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Obyek Data" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Indikator yang dibentuk" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Format" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Produsen Data" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="K/L/D" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Produsen required" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Jadwal Pemutakhiran" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Terkait Data Prioritas" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Terkait Prioritas Nasional" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+    </form>
+    <button type="submit" class="btn btn-primary" style="width: 250px; text-align: center; margin-left: 195px; margin-top: 20px;">Submit</button>
+  </div>
+</main>
+
+{% endblock %}

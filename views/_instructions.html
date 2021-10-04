@@ -1,9 +1,12 @@
+{% extends "base.html" %}
+
+
 {% macro r(dataset) -%}
 <p>If you are using R here's how to get the data you want quickly loaded:</p>
 <pre class="hljs"><code>install.packages(<span class="hljs-string">"jsonlite", repos="https://cran.rstudio.com/"</span>)
 <span class="hljs-keyword">library</span>(<span class="hljs-string">"jsonlite"</span>)
 
-json_file &lt;- <span class="hljs-string">'https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>
+json_file &lt;- <span class="hljs-string">'https://satudata.go.id/{{dataset.owner}}/{{dataset.name}}/datapackage.json'</span>
 json_data &lt;- fromJSON(paste(readLines(json_file), collapse=<span class="hljs-string">""</span>))
 
 <span class="hljs-comment"># get list of all resources:</span>
@@ -32,7 +35,7 @@ pip install pandas
 <pre class="hljs"><code><span class="hljs-keyword">import</span> datapackage
 <span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
 
-data_url = <span class="hljs-string">'https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>
+data_url = <span class="hljs-string">'https://satudata.go.id{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>
 
 <span class="hljs-comment"># to load Data Package into storage</span>
 package = datapackage.Package(data_url)
@@ -56,7 +59,7 @@ resources = package.resources
 
 <pre class="hljs"><code><span class="hljs-keyword">from</span> datapackage <span class="hljs-keyword">import</span> Package
 
-package = Package(<span class="hljs-string">'https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>)
+package = Package(<span class="hljs-string">'https://satudata.go.id{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>)
 
 <span class="hljs-comment"># print list of all resources:</span>
 <span class="hljs-keyword">print</span>(package.resource_names)
@@ -79,7 +82,7 @@ package = Package(<span class="hljs-string">'https://datahub.io/{{dataset.datahu
 <p>Once the package is installed, use the following code snippet:</p>
 <pre class="hljs"><code><span class="hljs-keyword">const</span> {Dataset} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'data.js'</span>)
 
-<span class="hljs-keyword">const</span> path = <span class="hljs-string">'https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>
+<span class="hljs-keyword">const</span> path = <span class="hljs-string">'https://satudata.go.id{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json'</span>
 
 <span class="hljs-comment">// We're using self-invoking function here as we want to use async-await syntax:</span>
 ;<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
@@ -109,7 +112,7 @@ package = Package(<span class="hljs-string">'https://datahub.io/{{dataset.datahu
   Use our <a href="/download">data-cli</a> tool designed for data wranglers:
 </p>
 
-<pre class="hljs"><code><span class="hljs-keyword">data get </span><span class="hljs-string">https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}</span>
+<pre class="hljs"><code><span class="hljs-keyword">data get </span><span class="hljs-string">https://satudata.go.id{{dataset.datahub.owner}}/{{dataset.name}}</span>
 <span class="hljs-keyword">data info </span><span class="hljs-string">{{dataset.datahub.owner}}/{{dataset.name}}</span>
 <span class="hljs-keyword">tree </span><span class="hljs-string">{{dataset.datahub.owner}}/{{dataset.name}}</span>
 </code></pre>
@@ -117,11 +120,11 @@ package = Package(<span class="hljs-string">'https://datahub.io/{{dataset.datahu
 
 {% macro curl(dataset) -%}
 <pre class="hljs"><code><span class="hljs-comment"># Get a list of dataset's resources</span>
-<span class="hljs-keyword">curl</span> -L -s <span class="hljs-string">https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json</span> | <span class="hljs-keyword">grep</span> path
+<span class="hljs-keyword">curl</span> -L -s <span class="hljs-string">https://satudata.go.id{{dataset.datahub.owner}}/{{dataset.name}}/datapackage.json</span> | <span class="hljs-keyword">grep</span> path
 
 <span class="hljs-comment"># Get resources</span>
 {% for resource in dataset.resources %}
-<span class="hljs-keyword">curl </span><span class="hljs-string">-L https://datahub.io/{{dataset.datahub.owner}}/{{dataset.name}}/r/{{loop.index0}}.{{resource.format}}</span>
+<span class="hljs-keyword">curl </span><span class="hljs-string">-L https://satudata.go.id{{dataset.datahub.owner}}/{{dataset.name}}/r/{{loop.index0}}.{{resource.format}}</span>
 {% endfor %}
 </code></pre>
 {%- endmacro %}

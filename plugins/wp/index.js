@@ -22,7 +22,7 @@ module.exports = function (app) {
   app.get('/', async (req, res,next) => {
     // Get latest 3 blog posts and pass it to home template
     let posts = await Model.getListOfPosts({
-      number: 3,
+      number: 1,
       fields: 'slug,title,content,date,modified,featured_image,categories,attachments'
     })
     posts = posts.map(post => {
@@ -48,19 +48,19 @@ module.exports = function (app) {
   })
 
   app.get(blogPath, listStaticPages);
-  app.get(`${blogPath}/:page`, showPostPage);
-  app.get(['/:page', '/:parent/:page'], showStaticPage);
+  app.get(`${blogPath}/news/:page`, showPostPage);
+  app.get(['/news/:page', '/:parent/:page'], showStaticPage);
 
   async function listStaticPages(req, res, next) {
     const defaultQuery = {
-      number: 10,
+      number: 100,
       page: 1,
       fields: 'slug,title,content,date,modified,featured_image,categories,attachments'
     }
     const actualQuery = Object.assign(defaultQuery, req.query)
     const response = (await Model.getListOfPostsWithMeta(actualQuery))
 
-    const currentPage = parseInt(actualQuery.page, 10)
+    const currentPage = parseInt(actualQuery.page, 3)
     res.locals.found = response.found
     res.locals.currentPage = currentPage
     const totalPages = Math.ceil(response.found / actualQuery.number)

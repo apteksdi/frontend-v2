@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title%}Login{% endblock %}
+
+{% block bodyclass %}awesome{% endblock %}
+
+{% block content %}
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Login</li>
+    </ol>
+  </nav>  
+</div>
+
+<!-- Login -->
+<section class="login-section">
+  <div class="container">
+    <h1 class="login-text">Login Form </h1>   
+    <form class="login-form">  
+      <div class="container" id="login-container"> 
+          <label>Email : </label>   
+          <input class="login-input" type="text" placeholder="Enter Email" name="email" required>  
+          <label>Password : </label>   
+          <input class="password-input" type="password" placeholder="Enter Password" name="password" required>  
+          <button id="login-button" type="submit">Login</button>
+          Forgot <a href="#"> password? </a>   
+      </div>   
+    </form>
+  </div>
+<section>
+
+{% endblock %}

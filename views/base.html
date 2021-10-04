@@ -13,10 +13,15 @@
       <link rel="stylesheet" media="screen" href="https://rawcdn.githack.com/datopian/datapackage-views-js/681e1ff21a0daee03e8e81ad0ddc7c8bf682aee9/dist/css/main.css">
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css">
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="/static/stylesheets/satudata.css">
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/satudata.css"> 
     <link rel="stylesheet" media="screen" href="/static/stylesheets/app.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script id="ga-gtag" async></script>
@@ -42,38 +47,48 @@
             </button>
             <a href="/"><img src="/static/img/Logo Satu Data Indonesia.png" style="height: 50px; padding-top: 5px;"></a>
           </div>
-          <!--
-          <div class="nav navbar-nav searchbox">
-            <form class="form-inline" action="/search" method="GET">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Find data" name="q">
-              </div>
-            </form>
-          </div>
-          -->
+
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <a href="/">Beranda</a>
               </li>
               <li>
-                <a href="/search" class="find-data join-link">Dataset</a>
+                <a href="/search">Pencarian</a>
+              </li>
+              <li>
+                <a href="/data">Dataset</a>
               </li>
               <li>
                 <a href="/dashboard">Dashboard</a>
               </li>
               <li>
-                <a href="/news">Berita</a>
+                <a href="/cms/berita/">Berita</a>
               </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Layanan
+                </a>
+                <ul class="dropdown-content" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/bimtek">Bimbingan Teknis</a></li>
+                  <li><a class="dropdown-item" href="/analisa">Analisa Data</a></li>
+                  <li><a class="dropdown-item" href="/ajudikasi">Ajudikasi Data</a></li>
+                  <li><a class="dropdown-item" href="/permintaan">Permintaan Data</a></li>
+                  <li><a class="dropdown-item" href="/komunitas">Komunitas Ahli</a></li>
+                  <li><a class="dropdown-item" href="/kanal">Kanal Luar</a></li>
+                </ul>
+              </li> -->
               <li>
                 <a href="/about">Tentang</a>
               </li>
+              <!-- <li>
+                <a href="/login">Login</a>
+              </li> -->
             </ul>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End of page header -->
+    </div> 
 
     <!-- Alert messages -->
     {% if message.length > 0 %}
@@ -109,6 +124,7 @@
               <li><a href="/">Permintaan Data</a></li>
               <li><a href="https://docs.ckan.org/en/2.9" target="_blank">Developer</a></li>
               <li><a href="/">FAQ</a></li>
+              <li><a href="https://satudata.go.id/data/organization/">Instansi Terhubung</a></li>
             </ul>
           </div>
         
@@ -116,8 +132,9 @@
             <h6>LINKS</h6>
             <ul class="footer-links">
               <li><a href="mailto:sekretariat-sdi@bappenas.go.id">Kontak Kami</a></li>
-              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="https://data.go.id/openproject/">OpenProject SDI</a></li>
               <li><a href="https://gitter.im/ckan/chat" target="_blank">Chat</a></li>
+              <li><a href="https://satudata.go.id/data/user/login">Login</a></li>
             </ul>
           </div>
         </div>

@@ -1,16 +1,73 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ message }}
+Beranda | Satu Data Indonesia
 {% endblock %}
 
-{% block bodyclass %}not-found{% endblock %}
+{% block bodyclass %}home{% endblock %}
 
 {% block content %}
+
+<script>
+  $('.select2').select2();
+</script>
+
 <!-- placeholder for testing 404 page -->
-<div>
-  <h1>{{ status }}</h1>
-  <h1>{{ message }}</h1>
-  <p>{{ comment }}</p>
+<div class="container" id="error-container">
+  <div class="col-sm-4">
+    <h2 id="kategori-instansi">Instansi</h2>
+    <select class="form-control select2" onChange="window.location.href=this.value">
+       <option value="">Pilih Instansi</option> 
+       <option value="pemerintah-provinsi-aceh">Pemerintah Provinsi Aceh</option> 
+       <option value="pemerintah-provinsi-jawa-tengah">Pemerintah Provinsi Jawa Tengah</option>
+       <option value="pemerintah-provinsi-kalimantan-barat">Pemerintah Provinsi Kalimantan Barat</option> 
+       <option value="pemerintah-provinsi-kalimantan-timur">Pemerintah Provinsi Kalimantan Timur</option>  
+       <option value="pemerintah-kabupaten-aceh-tamiang">Pemerintah Kabupaten Aceh Tamiang</option> 
+       <option value="pemerintah-kota-medan">Pemerintah Kota Medan</option>
+       <option value="pemerintah-kota-jambi">Pemerintah Kota Jambi</option> 
+       <option value="pemerintah-kota-bandung">Pemerintah Kota Bandung</option> 
+       <option value="pemerintah-kabupaten-cilacap">Pemerintah Kabupaten Cilacap</option> 
+       <option value="pemerintah-kabupaten-banyumas">Pemerintah Kabupaten Banyumas</option>
+       <option value="pemerintah-kabupaten-banjarnegara">Pemerintah Kabupaten Banjarnegara</option>
+       <option value="pemerintah-kabupaten-purworejo">Pemerintah Kabupaten Purworejo</option> 
+       <option value="pemerintah-kabupaten-wonosobo">Pemerintah Kabupaten Wonosobo</option>
+       <option value="pemerintah-kabupaten-magelang">Pemerintah Kabupaten Magelang</option> 
+       <option value="pemerintah-kabupaten-klaten">Pemerintah Kabupaten Klaten</option> 
+       <option value="pemerintah-kabupaten-sukoharjo">Pemerintah Kabupaten Sukoharjo</option>
+       <option value="pemerintah-kabupaten-karanganyar">Pemerintah Kabupaten Karanganyar</option> 
+       <option value="pemerintah-kabupaten-sragen">Pemerintah Kabupaten Sragen</option> 
+       <option value="pemerintah-kabupaten-rembang">Pemerintah Kabupaten Rembang</option> 
+       <option value="pemerintah-kabupaten-pati">Pemerintah Kabupaten Pati</option>
+       <option value="pemerintah-kabupaten-kudus">Pemerintah Kabupaten Kudus</option> 
+       <option value="pemerintah-kabupaten-demak">Pemerintah Kabupaten Demak</option> 
+       <option value="pemerintah-kabupaten-temanggung">Pemerintah Kabupaten Temanggung</option> 
+       <option value="pemerintah-kabupaten-kendal">Pemerintah Kabupaten Kendal</option>
+       <option value="pemerintah-kabupaten-batang">Pemerintah Kabupaten Batang</option> 
+       <option value="pemerintah-kabupaten-pekalongan">Pemerintah Kabupaten Pekalongan</option> 
+       <option value="pemerintah-kabupaten-pemalang">Pemerintah Kabupaten Pemalang</option> 
+       <option value="pemerintah-kabupaten-tegal">Pemerintah Kabupaten Tegal</option>
+       <option value="pemerintah-kota-magelang">Pemerintah Kota Magelang</option> 
+       <option value="pemerintah-kota-surakarta">Pemerintah Kota Surakarta</option>  
+       <option value="pemerintah-kota-salatiga">Pemerintah Kota Salatiga</option> 
+       <option value="pemerintah-kota-semarang">Pemerintah Kota semarang</option>
+       <option value="pemerintah-kota-tegal">Pemerintah Kota Tegal</option> 
+       <option value="pemerintah-kabupaten-bantul">Pemerintah Kabupaten Bantul</option> 
+       <option value="pemerintah-kabupaten-sleman">Pemerintah Kabupaten Sleman</option> 
+       <option value="pemerintah-kabupaten-blitar">Pemerintah Kabupaten Blitar</option>
+       <option value="pemerintah-kota-mojokerto">Pemerintah Kota Mojokerto</option> 
+       <option value="pemerintah-kabupaten-sanggau">Pemerintah Kabupaten Sanggau</option> 
+       <option value="pemerintah-kabupaten-kutai-timur">Pemerintah Kabupaten Kutai Timur</option> 
+    </select>
+
+  </div>
+  <div class="col-sm-8">
+    <div class="error-content">
+      <i class="fas fa-exclamation-triangle fa-7x" id="error-icon"></i>
+      <h1>{{ status }}</h1>
+      <h1>{{ message }}</h1>
+      <p>{{ comment }}</p>
+    </div>
+  </div>
 </div>
+
 {% endblock %}

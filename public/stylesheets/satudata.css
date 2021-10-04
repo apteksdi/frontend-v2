@@ -1,10 +1,26 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,700,300);
 
+
+/**** General ****/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #2d2c41;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+}
 
 
 /**** Page Home ****/
 .featured_banner {
-  background-image: url('/static/img/hero.png');
+  background-image: url('/static/img/indonesia-01.jpg');
   background-size: cover;
   height: 50rem;
 }
@@ -25,18 +41,19 @@
 
 .input-group .form-control {
   background: transparent;
-  padding-top: 15px;
+  padding-top: 5px;
   font-size: 18px;
 }
 
 
 .input-group {
+  width: 100%;
   background: #fff;
   border-radius: 5px;
 }
 
 #custom-search-input{
-  padding: 3px;
+  padding: 0px;
   border: solid 1px #E4E4E4;
   border-radius: 6px;
   background-color: #fff;
@@ -48,6 +65,7 @@
 }
 
 #custom-search-input button{
+  width: 90px;
   margin: 3px;
   background: none;
   box-shadow: none;
@@ -65,6 +83,27 @@
 
 #custom-search-input .glyphicon-search{
   font-size: 23px;
+} 
+
+/*** Section Dashboard Halam Home ***/
+#dashboard-container {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+#dashboard-row {
+  text-align: center;
+}
+
+.tableauPlaceholder {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-1 {
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 /**** ENDING OF PAGE HOME ***/
 
@@ -397,17 +436,22 @@ border-radius: 3px;
 border: 1px solid #ddd;
 }
 
+#news-container {
+  padding-top: 0px;
+}
+
 .small-title {
 font-size: 20px;
 text-transform: capitalize;
 color: #ff7900;
-margin-bottom: 10px;
+margin-bottom: 0px;
 margin-top: 0px;
 font-weight: 600;
 }
 .big-title {
+margin-top: 0px;
+margin-bottom: 50px;
 letter-spacing: 0px;
-padding-bottom: 13px;
 position: relative;
 color: #233D63;
 line-height: 50px;
@@ -416,7 +460,7 @@ text-transform: capitalize;
 font-weight: 600;
 }
 .main-title-box {
-margin-bottom: 60px;
+margin-bottom: 20px;
 }
 /***** ENDING BLOG *****/ 
 
@@ -441,7 +485,7 @@ margin-bottom: 60px;
 /** Kategori **/
 .topic-title {
   margin: 0px;
-  color: #940709;
+  color: #000000;
 }
 
 .flex-item {
@@ -459,12 +503,16 @@ margin-bottom: 60px;
 }
 
 #kategori-icon {
-  color: #940709;
+  color: #000000;
+}
+
+h2, #kategori-dataset {
+  margin: 0px;
 }
 
 #kategori-icon:hover {
   color: #ff7900;
-  transition: ease-in 0.5;
+  transition: all 0.5s ease;
 }
 
 /***** ENDING FLEXBOX *****/
@@ -523,8 +571,7 @@ margin-bottom: 60px;
 body {
   background-color: #f5f5f5;
   color: #333;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;  font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -537,12 +584,6 @@ p.center {
   text-align: center;
 }
 
-h11 {
-  color: #0198cc;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
-}
 
 /* Modal Styles */
 #css-modal {
@@ -680,12 +721,50 @@ h11 {
 /** Ending Banner Data API **/
 
 /** Unduhan **/
+@media screen and (max-width: 800px) {
+  .news-section {
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+  }
+  
+  #core-datasets {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .card {
+    max-width: 300px;
+  }
+
+  #col-card {
+    margin: 10px 0px 10px 0px;
+  }
+}
+
+.news-section {
+  margin: 20px 0px 0px 0px;
+  padding: 0px;
+}
+
+#core-datasets {
+  padding: 0px;
+  margin: 0px;
+}
+
+#dashboard-section {
+  padding: 0px;
+}
+
+#col-card {
+  margin-bottom: 15px;
+}
+
 .card {
   background: #fff;
   border-radius: 2px;
   display: block;
   min-height: 150px;
-  margin: 1rem auto;
+  margin: 5px;
   width: 900px;
   box-sizing: border-box;
   padding: 30px;
@@ -727,6 +806,7 @@ h11 {
   text-align: left;
   color: #A3A3A3;
   margin: 10px 0;
+  overflow-wrap: break-word;
 }
 
 .card h2.changelog_title {
@@ -774,7 +854,6 @@ h11 {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 /** Ending of Unduhan **/
 
 
@@ -792,6 +871,11 @@ h11 {
 #container-kategori-instansi {
   margin: 0px 0px 50px 0px;
   padding: 0px 0px 0px 0px;
+}
+
+h2, #kategori-instansi {
+  margin-top: 50px;
+  margin-bottom: 28px;
 }
 
 .accordion, #accordion { 
@@ -814,27 +898,12 @@ h11 {
 
 
 /** Dropdown Instansi **/
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background: #2d2c41;
-  font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
-}
-
 ul { list-style-type: none; }
 
 a {
   color: #b63b4d;
   text-decoration: none;
 }
-
 
 /** =======================
  * Contenedor Principal
@@ -911,8 +980,6 @@ h10 a {
 /**
  * Submenu
  -----------------------------*/
-
-
 .submenu {
   display: none;
   background: #d9d9d9;
@@ -937,5 +1004,197 @@ h10 a {
   color: #FFF;
 }
 
-
 /** Dropdown Instansi **/
+option {
+  width: 350px;
+}
+
+.select2-container .select2-selection--single{
+  height:34px !important;
+}
+.select2-container--default .select2-selection--single{
+  max-width: 350px;
+  width: 350px;
+  border: 1px solid #ccc !important; 
+  border-radius: 0px !important; 
+}
+
+@media screen and (max-width: 800px) {
+  .select2-container--default .select2-selection--single{
+    max-width: 300px;
+    width: 300px;
+    border: 1px solid #ccc !important; 
+    border-radius: 0px !important; 
+  }
+
+  option {
+    max-width: 200px;
+    width: 200px;
+  }
+}
+
+/***** Halaman About *****/
+@media screen and (max-width: 800px) {
+  iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+/***** Halaman Login *****/
+#error-container {
+  padding-top: 0px;
+  padding-bottom: 50px;
+}
+
+#error-container, #kategori-instansi {
+  margin-top: 20px;
+}
+
+.error-content {
+  text-align: center;
+}
+
+#error-icon {
+  color: #a70000;
+}
+
+@media screen and (max-width: 800px) {
+  .error-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+/***** Ending Halaman Login *****/
+.login-section {
+  background-color: #ffffff;
+}
+
+.login-text {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+#login-container {
+  width: 400px;
+  padding-bottom: 20px;
+}
+
+#login-button {   
+  background-color: #a70000;   
+  width: 100%;  
+   color: white;   
+   padding: 15px;   
+   margin: 10px 0px;   
+   border: none;   
+   cursor: pointer;   
+    }  
+
+.login-input[type=text], .password-input[type=password] {   
+   width: 100%;   
+   margin: 8px 0;  
+   padding: 12px 20px;   
+   display: inline-block;   
+   border: 2px solid #a70000;   
+   box-sizing: border-box;   
+}  
+button:hover {   
+   opacity: 0.7;   
+}   
+.cancelbtn {   
+   width: auto;   
+   padding: 10px 18px;  
+   margin: 10px 5px;  
+}
+
+@media screen and (max-width: 800px) {
+  #login-container {
+    max-width: 350px;
+    width: 400px;
+  } 
+}
+
+/**** Halaman Bimbingan Teknis ****/
+.button-pilihan {
+  text-align: center;
+}
+
+.button-pilihan > .btn {
+  margin: 0 15px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.button-pilihan > .btn:hover {
+  color: #000000;
+  font-weight: 800;
+  border: 2px solid #ff7900;
+  transition: all 0.5 ease-in-out;
+}
+
+button {
+  margin: 0 30px;
+  width: 150px;
+}
+
+#col-kecil {
+  margin: 0 20px;
+}
+
+#col-kecil > ul > li {
+  font-size: 16px;
+}
+
+#col-materi {
+  margin-right: 100px;
+}
+
+#col-materi > h5 {
+  font-size: 18px;
+}
+
+/***** Ending Halaman BIMTEK *****/
+
+/***** Halaman Analisa Data *****/
+#container-analisa {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  background-color: #eeeeee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#container-analisa > .col-4 {
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+}
+
+#container-analisa > .col-4 > h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+/***** Ending Halaman Analisa Data *****/
+
+/***** Komunitas Ahli *****/
+#container-content-komunikasi > .col-9 {
+  margin-bottom: 20px;
+}
+
+#row-pilihan > .col-3 {
+  margin: 0 10px;
+}

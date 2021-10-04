@@ -123,16 +123,6 @@ module.exports = function () {
     })
   })
 
-  router.get('/about', async (req, res, next) => {
-    const collections = await Model.getCollections()
-    res.render('about.html', {
-      title: 'Satu Data Indonesia',
-      description: 'Satu Data Indonesia (SDI) merupakan kebijakan tata kelola data pemerintah yang bertujuan untuk menciptakan data berkualitas, mudah diakses, dan dapat dibagipakaikan antar Instansi Pusat serta Daerah. Kebijakan ini tertuang dalam Peraturan Presiden no. 39 tahun 2019 tentang Satu Data Indonesia. Melalu SDI, seluruh data pemerintah dan data instansi lain yang terkait dapat bermuara di Portal Satu Data Indonesia (data.go.id). Portal Satu Data Indonesia merupakan portal resmi data terbuka Indonesia yang dikelola oleh Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian Perencanaan Pembangunan Nasional / Bappenas. Melalui Portal Satu Data Indonesia, kami berupaya penuh untuk memperbaiki tata kelola data demi terwujudnya transparansi dan akuntabilitas pemerintah, serta mendukung pembangunan nasional.',
-      collections,
-      slug: 'about'
-    })
-  })
-
   router.get('/dashboard', async (req, res, next) => {
     const collections = await Model.getCollections()
     res.render('dashboard.html', {
@@ -143,13 +133,93 @@ module.exports = function () {
     })
   })
 
+  router.get('/about', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('about.html', {
+      title: 'Satu Data Indonesia',
+      description: 'Satu Data Indonesia (SDI) merupakan kebijakan tata kelola data pemerintah yang bertujuan untuk menciptakan data berkualitas, mudah diakses, dan dapat dibagipakaikan antar Instansi Pusat serta Daerah. Kebijakan ini tertuang dalam Peraturan Presiden no. 39 tahun 2019 tentang Satu Data Indonesia. Melalu SDI, seluruh data pemerintah dan data instansi lain yang terkait dapat bermuara di Portal Satu Data Indonesia (data.go.id). Portal Satu Data Indonesia merupakan portal resmi data terbuka Indonesia yang dikelola oleh Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian Perencanaan Pembangunan Nasional / Bappenas. Melalui Portal Satu Data Indonesia, kami berupaya penuh untuk memperbaiki tata kelola data demi terwujudnya transparansi dan akuntabilitas pemerintah, serta mendukung pembangunan nasional.',
+      collections,
+      slug: 'about'
+    })
+  })
+
+  router.get('/bimtek', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('bimtek.html', {
+      title: 'Bimbingan Teknis',
+      description: 'Bimbingan Teknis',
+      collections,
+      slug: 'bimtek'
+    })
+  })
+
+  router.get('/analisa', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('analisa.html', {
+      title: 'Analisa Data',
+      description: 'Analisa Data',
+      collections,
+      slug: 'analisa'
+    })
+  })
+
+  router.get('/ajudikasi', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('ajudikasi.html', {
+      title: 'Ajudikasi Data',
+      description: 'Ajudikasi Data',
+      collections,
+      slug: 'ajudikasi'
+    })
+  })
+
+  router.get('/permintaan', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('permintaan.html', {
+      title: 'Permintaan Data',
+      description: 'Permintaan Data',
+      collections,
+      slug: 'permintaan'
+    })
+  })
+
+  router.get('/komunitas', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('komunitas.html', {
+      title: 'Komunitas Ahli',
+      description: 'Komunitas Ahli',
+      collections,
+      slug: 'komunitas'
+    })
+  })
+
+  router.get('/kanal', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('kanal.html', {
+      title: 'Kanal Luar',
+      description: 'Kanal Luar',
+      collections,
+      slug: 'kanal'
+    })
+  })
+
   router.get('/unduhan', async (req, res, next) => {
     const collections = await Model.getCollections()
     res.render('unduhan.html', {
       title: 'Unduhan Dokumen',
-      description: 'Unduhan DOkumen',
+      description: 'Unduhan Dokumen',
       collections,
       slug: 'unduhan'
+    })
+  })
+
+  router.get('/login', async (req, res, next) => {
+    const collections = await Model.getCollections()
+    res.render('login.html', {
+      title: 'Login',
+      description: 'Login',
+      collections,
+      slug: 'login'
     })
   })
 

@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block title%}Komunitas Ahli{% endblock %}
+
+{% block bodyclass %}awesome{% endblock %}
+
+{% block content %}
+<style>
+  
+</style>
+
+
+<!-- breadcrumb -->
+<div class="container" id="bread-crumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Komunitas Ahli</li>
+    </ol>
+  </nav>  
+</div>
+
+<!-- Komunitas Ahli Title -->
+<section class="news-section">
+  <div class="container" id="news-container">
+    <div class="main-title-box text-center">
+      <div class="small-title">Komunitas Ahli</div>
+      <h2 class="big-title">Satu Data Indonesia</h2> 
+    </div>
+  </div>
+</section>
+
+<!--main content-->
+<main>
+  <div class="container" style="text-align: center; padding-top: 0;">
+    <form class="login-form" style="padding-bottom: 20px;">  
+      <input class="nama-input" type="text" placeholder="Nama" name="nama" style="width: 100%; text-align: center; height: 50px;">  
+    </form>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="row" id="row-pilihan" style="display: flex;">
+        <div class="col-3">
+          <select class="form-control select2" onChange="window.location.href=this.value" style="width: 300px;">
+            <option value="">Daerah</option> 
+            <option value="pemerintah-provinsi-aceh">Pemerintah Provinsi Aceh</option> 
+            <option value="pemerintah-provinsi-jawa-tengah">Pemerintah Provinsi Jawa Tengah</option>
+            <option value="pemerintah-provinsi-kalimantan-barat">Pemerintah Provinsi Kalimantan Barat</option> 
+            <option value="pemerintah-provinsi-kalimantan-timur">Pemerintah Provinsi Kalimantan Timur</option>  
+            <option value="pemerintah-kabupaten-aceh-tamiang">Pemerintah Kabupaten Aceh Tamiang</option> 
+            <option value="pemerintah-kota-medan">Pemerintah Kota Medan</option>
+            <option value="pemerintah-kota-jambi">Pemerintah Kota Jambi</option> 
+            <option value="pemerintah-kota-bandung">Pemerintah Kota Bandung</option> 
+            <option value="pemerintah-kabupaten-cilacap">Pemerintah Kabupaten Cilacap</option> 
+            <option value="pemerintah-kabupaten-banyumas">Pemerintah Kabupaten Banyumas</option>
+            <option value="pemerintah-kabupaten-banjarnegara">Pemerintah Kabupaten Banjarnegara</option>
+            <option value="pemerintah-kabupaten-purworejo">Pemerintah Kabupaten Purworejo</option> 
+            <option value="pemerintah-kabupaten-wonosobo">Pemerintah Kabupaten Wonosobo</option>
+            <option value="pemerintah-kabupaten-magelang">Pemerintah Kabupaten Magelang</option> 
+            <option value="pemerintah-kabupaten-klaten">Pemerintah Kabupaten Klaten</option> 
+            <option value="pemerintah-kabupaten-sukoharjo">Pemerintah Kabupaten Sukoharjo</option>
+            <option value="pemerintah-kabupaten-karanganyar">Pemerintah Kabupaten Karanganyar</option> 
+            <option value="pemerintah-kabupaten-sragen">Pemerintah Kabupaten Sragen</option> 
+            <option value="pemerintah-kabupaten-rembang">Pemerintah Kabupaten Rembang</option> 
+            <option value="pemerintah-kabupaten-pati">Pemerintah Kabupaten Pati</option>
+            <option value="pemerintah-kabupaten-kudus">Pemerintah Kabupaten Kudus</option> 
+            <option value="pemerintah-kabupaten-demak">Pemerintah Kabupaten Demak</option> 
+            <option value="pemerintah-kabupaten-temanggung">Pemerintah Kabupaten Temanggung</option> 
+            <option value="pemerintah-kabupaten-kendal">Pemerintah Kabupaten Kendal</option>
+            <option value="pemerintah-kabupaten-batang">Pemerintah Kabupaten Batang</option> 
+            <option value="pemerintah-kabupaten-pekalongan">Pemerintah Kabupaten Pekalongan</option> 
+            <option value="pemerintah-kabupaten-pemalang">Pemerintah Kabupaten Pemalang</option> 
+            <option value="pemerintah-kabupaten-tegal">Pemerintah Kabupaten Tegal</option>
+            <option value="pemerintah-kota-magelang">Pemerintah Kota Magelang</option> 
+            <option value="pemerintah-kota-surakarta">Pemerintah Kota Surakarta</option>  
+            <option value="pemerintah-kota-salatiga">Pemerintah Kota Salatiga</option> 
+            <option value="pemerintah-kota-semarang">Pemerintah Kota semarang</option>
+            <option value="pemerintah-kota-tegal">Pemerintah Kota Tegal</option> 
+            <option value="pemerintah-kabupaten-bantul">Pemerintah Kabupaten Bantul</option> 
+            <option value="pemerintah-kabupaten-sleman">Pemerintah Kabupaten Sleman</option> 
+            <option value="pemerintah-kabupaten-blitar">Pemerintah Kabupaten Blitar</option>
+            <option value="pemerintah-kota-mojokerto">Pemerintah Kota Mojokerto</option> 
+            <option value="pemerintah-kabupaten-sanggau">Pemerintah Kabupaten Sanggau</option> 
+            <option value="pemerintah-kabupaten-kutai-timur">Pemerintah Kabupaten Kutai Timur</option> 
+          </select>
+        </div>
+        <div class="col-3">
+          <select class="form-control select2" onChange="window.location.href=this.value" style="width: 300px;">
+            <option value="">Bidang/Keahlian</option> 
+            <option value="pemerintah-provinsi-aceh">Pemerintah Provinsi Aceh</option> 
+            <option value="pemerintah-provinsi-jawa-tengah">Pemerintah Provinsi Jawa Tengah</option>
+            <option value="pemerintah-provinsi-kalimantan-barat">Pemerintah Provinsi Kalimantan Barat</option> 
+            <option value="pemerintah-provinsi-kalimantan-timur">Pemerintah Provinsi Kalimantan Timur</option>  
+            <option value="pemerintah-kabupaten-aceh-tamiang">Pemerintah Kabupaten Aceh Tamiang</option> 
+            <option value="pemerintah-kota-medan">Pemerintah Kota Medan</option>
+            <option value="pemerintah-kota-jambi">Pemerintah Kota Jambi</option> 
+            <option value="pemerintah-kota-bandung">Pemerintah Kota Bandung</option> 
+            <option value="pemerintah-kabupaten-cilacap">Pemerintah Kabupaten Cilacap</option> 
+            <option value="pemerintah-kabupaten-banyumas">Pemerintah Kabupaten Banyumas</option>
+            <option value="pemerintah-kabupaten-banjarnegara">Pemerintah Kabupaten Banjarnegara</option>
+            <option value="pemerintah-kabupaten-purworejo">Pemerintah Kabupaten Purworejo</option> 
+            <option value="pemerintah-kabupaten-wonosobo">Pemerintah Kabupaten Wonosobo</option>
+            <option value="pemerintah-kabupaten-magelang">Pemerintah Kabupaten Magelang</option> 
+            <option value="pemerintah-kabupaten-klaten">Pemerintah Kabupaten Klaten</option> 
+            <option value="pemerintah-kabupaten-sukoharjo">Pemerintah Kabupaten Sukoharjo</option>
+            <option value="pemerintah-kabupaten-karanganyar">Pemerintah Kabupaten Karanganyar</option> 
+            <option value="pemerintah-kabupaten-sragen">Pemerintah Kabupaten Sragen</option> 
+            <option value="pemerintah-kabupaten-rembang">Pemerintah Kabupaten Rembang</option> 
+            <option value="pemerintah-kabupaten-pati">Pemerintah Kabupaten Pati</option>
+            <option value="pemerintah-kabupaten-kudus">Pemerintah Kabupaten Kudus</option> 
+            <option value="pemerintah-kabupaten-demak">Pemerintah Kabupaten Demak</option> 
+            <option value="pemerintah-kabupaten-temanggung">Pemerintah Kabupaten Temanggung</option> 
+            <option value="pemerintah-kabupaten-kendal">Pemerintah Kabupaten Kendal</option>
+            <option value="pemerintah-kabupaten-batang">Pemerintah Kabupaten Batang</option> 
+            <option value="pemerintah-kabupaten-pekalongan">Pemerintah Kabupaten Pekalongan</option> 
+            <option value="pemerintah-kabupaten-pemalang">Pemerintah Kabupaten Pemalang</option> 
+            <option value="pemerintah-kabupaten-tegal">Pemerintah Kabupaten Tegal</option>
+            <option value="pemerintah-kota-magelang">Pemerintah Kota Magelang</option> 
+            <option value="pemerintah-kota-surakarta">Pemerintah Kota Surakarta</option>  
+            <option value="pemerintah-kota-salatiga">Pemerintah Kota Salatiga</option> 
+            <option value="pemerintah-kota-semarang">Pemerintah Kota semarang</option>
+            <option value="pemerintah-kota-tegal">Pemerintah Kota Tegal</option> 
+            <option value="pemerintah-kabupaten-bantul">Pemerintah Kabupaten Bantul</option> 
+            <option value="pemerintah-kabupaten-sleman">Pemerintah Kabupaten Sleman</option> 
+            <option value="pemerintah-kabupaten-blitar">Pemerintah Kabupaten Blitar</option>
+            <option value="pemerintah-kota-mojokerto">Pemerintah Kota Mojokerto</option> 
+            <option value="pemerintah-kabupaten-sanggau">Pemerintah Kabupaten Sanggau</option> 
+            <option value="pemerintah-kabupaten-kutai-timur">Pemerintah Kabupaten Kutai Timur</option> 
+          </select>
+
+        </div>
+        <div class="col-3">
+          <select class="form-control select2" onChange="window.location.href=this.value" style="width: 300px;">
+            <option value="">Semua Komunitas</option> 
+            <option value="pemerintah-provinsi-aceh">Pemerintah Provinsi Aceh</option> 
+            <option value="pemerintah-provinsi-jawa-tengah">Pemerintah Provinsi Jawa Tengah</option>
+            <option value="pemerintah-provinsi-kalimantan-barat">Pemerintah Provinsi Kalimantan Barat</option> 
+            <option value="pemerintah-provinsi-kalimantan-timur">Pemerintah Provinsi Kalimantan Timur</option>  
+            <option value="pemerintah-kabupaten-aceh-tamiang">Pemerintah Kabupaten Aceh Tamiang</option> 
+            <option value="pemerintah-kota-medan">Pemerintah Kota Medan</option>
+            <option value="pemerintah-kota-jambi">Pemerintah Kota Jambi</option> 
+            <option value="pemerintah-kota-bandung">Pemerintah Kota Bandung</option> 
+            <option value="pemerintah-kabupaten-cilacap">Pemerintah Kabupaten Cilacap</option> 
+            <option value="pemerintah-kabupaten-banyumas">Pemerintah Kabupaten Banyumas</option>
+            <option value="pemerintah-kabupaten-banjarnegara">Pemerintah Kabupaten Banjarnegara</option>
+            <option value="pemerintah-kabupaten-purworejo">Pemerintah Kabupaten Purworejo</option> 
+            <option value="pemerintah-kabupaten-wonosobo">Pemerintah Kabupaten Wonosobo</option>
+            <option value="pemerintah-kabupaten-magelang">Pemerintah Kabupaten Magelang</option> 
+            <option value="pemerintah-kabupaten-klaten">Pemerintah Kabupaten Klaten</option> 
+            <option value="pemerintah-kabupaten-sukoharjo">Pemerintah Kabupaten Sukoharjo</option>
+            <option value="pemerintah-kabupaten-karanganyar">Pemerintah Kabupaten Karanganyar</option> 
+            <option value="pemerintah-kabupaten-sragen">Pemerintah Kabupaten Sragen</option> 
+            <option value="pemerintah-kabupaten-rembang">Pemerintah Kabupaten Rembang</option> 
+            <option value="pemerintah-kabupaten-pati">Pemerintah Kabupaten Pati</option>
+            <option value="pemerintah-kabupaten-kudus">Pemerintah Kabupaten Kudus</option> 
+            <option value="pemerintah-kabupaten-demak">Pemerintah Kabupaten Demak</option> 
+            <option value="pemerintah-kabupaten-temanggung">Pemerintah Kabupaten Temanggung</option> 
+            <option value="pemerintah-kabupaten-kendal">Pemerintah Kabupaten Kendal</option>
+            <option value="pemerintah-kabupaten-batang">Pemerintah Kabupaten Batang</option> 
+            <option value="pemerintah-kabupaten-pekalongan">Pemerintah Kabupaten Pekalongan</option> 
+            <option value="pemerintah-kabupaten-pemalang">Pemerintah Kabupaten Pemalang</option> 
+            <option value="pemerintah-kabupaten-tegal">Pemerintah Kabupaten Tegal</option>
+            <option value="pemerintah-kota-magelang">Pemerintah Kota Magelang</option> 
+            <option value="pemerintah-kota-surakarta">Pemerintah Kota Surakarta</option>  
+            <option value="pemerintah-kota-salatiga">Pemerintah Kota Salatiga</option> 
+            <option value="pemerintah-kota-semarang">Pemerintah Kota semarang</option>
+            <option value="pemerintah-kota-tegal">Pemerintah Kota Tegal</option> 
+            <option value="pemerintah-kabupaten-bantul">Pemerintah Kabupaten Bantul</option> 
+            <option value="pemerintah-kabupaten-sleman">Pemerintah Kabupaten Sleman</option> 
+            <option value="pemerintah-kabupaten-blitar">Pemerintah Kabupaten Blitar</option>
+            <option value="pemerintah-kota-mojokerto">Pemerintah Kota Mojokerto</option> 
+            <option value="pemerintah-kabupaten-sanggau">Pemerintah Kabupaten Sanggau</option> 
+            <option value="pemerintah-kabupaten-kutai-timur">Pemerintah Kabupaten Kutai Timur</option> 
+          </select>
+
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="container" id="container-content-komunikasi">
+        <div class="col-9">
+          <img src="/static/img/sec3.jpg" alt="" style="width: 250px; float: left; margin-right: 20px;">
+          <h5>Jakarta, 05 Agustus 2021</h5>
+          <h3>Tata Cara Pengelolaan Keuangan Daerah dan Proses Akuntansi Bagi PPK dan Bendahara wan SKPD Sesuai Dengan Peraturan Pemerintah No 12 Tahun 2019</h3>
+          <p>Dalam mengelola keuangan daerah sangat diperlukan BIMTEK keuangan 2020. Bimbingan teknis berguna agar setiap perangkat daerah bisa menjalankan pengelolaan keuangan yang lebih efisien dan mengikuti sistem terkini...</p>
+          <a href="#">Selengkapnya....</a>
+        </div>
+        <div class="col-9">
+          <img src="/static/img/sec3.jpg" alt="" style="width: 250px; float: left; margin-right: 20px;">
+          <h5>Jakarta, 05 Agustus 2021</h5>
+          <h3>Tata Cara Pengelolaan Keuangan Daerah dan Proses Akuntansi Bagi PPK dan Bendahara wan SKPD Sesuai Dengan Peraturan Pemerintah No 12 Tahun 2019</h3>
+          <p>Dalam mengelola keuangan daerah sangat diperlukan BIMTEK keuangan 2020. Bimbingan teknis berguna agar setiap perangkat daerah bisa menjalankan pengelolaan keuangan yang lebih efisien dan mengikuti sistem terkini...</p>
+          <a href="#">Selengkapnya....</a>
+        </div>
+        <div class="col-9">
+          <img src="/static/img/sec3.jpg" alt="" style="width: 250px; float: left; margin-right: 20px;">
+          <h5>Jakarta, 05 Agustus 2021</h5>
+          <h3>Tata Cara Pengelolaan Keuangan Daerah dan Proses Akuntansi Bagi PPK dan Bendahara wan SKPD Sesuai Dengan Peraturan Pemerintah No 12 Tahun 2019</h3>
+          <p>Dalam mengelola keuangan daerah sangat diperlukan BIMTEK keuangan 2020. Bimbingan teknis berguna agar setiap perangkat daerah bisa menjalankan pengelolaan keuangan yang lebih efisien dan mengikuti sistem terkini...</p>
+          <a href="#">Selengkapnya....</a>
+        </div>
+        <div class="col-9">
+          <img src="/static/img/sec3.jpg" alt="" style="width: 250px; float: left; margin-right: 20px;">
+          <h5>Jakarta, 05 Agustus 2021</h5>
+          <h3>Tata Cara Pengelolaan Keuangan Daerah dan Proses Akuntansi Bagi PPK dan Bendahara wan SKPD Sesuai Dengan Peraturan Pemerintah No 12 Tahun 2019</h3>
+          <p>Dalam mengelola keuangan daerah sangat diperlukan BIMTEK keuangan 2020. Bimbingan teknis berguna agar setiap perangkat daerah bisa menjalankan pengelolaan keuangan yang lebih efisien dan mengikuti sistem terkini...</p>
+          <a href="#">Selengkapnya....</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

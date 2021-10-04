@@ -1,27 +1,24 @@
 {% extends "base.html" %}
 
-{% block title%}Berita{% endblock %}
+{% block title%}{{title}} - Blog{% endblock %}
 
 {% block bodyclass %}blog{% endblock %}
 
 {% block content %}
-<style>
-  
-</style>
 
 <!-- breadcrumb -->
 <div class="container" id="bread-crumb">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Berita</li>
+      <li class="breadcrumb-item active" aria-current="page">Blog</li>
     </ol>
   </nav>  
 </div>
 
 <!-- blog home page test placeholder -->
 <section class="blog-page">
-  <!--<div class="container">
+  <div class="container">
 
     <div class="inner_container">
       {% for post in posts %}
@@ -34,204 +31,56 @@
         </p>
         {{post.content | safe | truncate(100)}}
         <p><a href="/news/{{post.slug}}">Read more</a></p>
+        <h1>LOREM IPSUM</h1>
+        <div class="newsimg"><img class="featured_image" alt=""></div>
       </div>
 
       {% endfor %}
     </div>
 
-  </div>-->
-
-  <section class="news-section">
-    <div class="container">
-        <div class="main-title-box text-center">
-                    <div class="small-title">Berita</div>
-                    <h2 class="big-title">Satu Data Indonesia</h2>
-        </div>
-               <div class="row">
-                  <!--Single Blog Start-->
-                  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
-                    <div class="news-item">
-                        <div class="news_box">
-                            <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/2021-07-16-132635.453736Screenshot-from-2021-07-16-20-26-13.png" alt=""></div>
-                            <div class="news-content">
-                                <div class="news_postdate">
-                                    <span>06 Juli, 2021</span>
-                                </div>
-                                <a href="http://114.5.121.197:4000/press-release-rapat-dewan-pengarah-selasa-06-juli-2021">
-                                    <h3>Press Release Rapat Dewan Pengarah, Selasa 06 Juli 2021</h3>
-                                </a>
-                                <p>Satu Data Indonesia (SDI) adalah kebijakan Tata Kelola Data Pemerintah untuk menghasilkan Data yang akurat, mutakhir, terpadu dan dapat dipertanggungjawabkan, serta mudah diakses dan dibagi pakaikan antar instansi Pusat dan instansi Daerah melalui prinsip datu data yaitu pemenuhan Standar Data, Metadata, Interoperabilitas Data, dan menggunakan Kode Referensi ...</p>
-                                <div class="news_authorinfo">
-                                    <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti </a></span>
-                                    <span><i class="fa fa-comment"></i> <a href="">Komentar: (0)</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Blog End-->
-                   <!--Single Blog Start-->
-                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
-                       <div class="news-item">
-                           <div class="news_box">
-                               <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/IMG_2022.JPG" alt=""></div>
-                               <div class="news-content">
-                                   <div class="news_postdate">
-                                       <span>27 November, 2020</span>
-                                   </div>
-                                   <a href="http://114.5.121.197:4000/sekretariat-satu-data-indonesia-integrasikan-data-umkm-kota-bukittinggi-ke-portal-sdi">
-                                       <h3>Sekretariat SDI Integrasikan Data UMKM Kota Bukittinggi ke Portal SDI</h3>
-                                   </a>
-                                   <p>Program Pemulihan Ekonomi Nasional (PEN) yang diharapkan dapat menyelamatkan perekonomian Indonesia dari dampak wabah Covid-19 tidak hanya berfokus pada penanganan krisis kesehatan. Program PEN dijalankan sebagai respon atas penurunan ...</p>
-                                   <div class="news_authorinfo">
-                                       <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti </a></span>
-                                       <span><i class="fa fa-comment"></i> <a href="">Komentar: (0)</a></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <!--Single Blog End-->
-                   <!--Single Blog Start-->
-                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                       <div class="news-item active">
-                           <div class="news_box">
-                               <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/IMG_1102.JPG" alt=""></div>
-                               <div class="news-content">
-                                   <div class="news_postdate">
-                                       <span>13 November, 2020</span>
-                                   </div>
-                                   <a href="http://114.5.121.197:4000/implementasi-satu-data-indonesia-dorong-efisiensi-bantuan-sosial-di-provinsi-diy">
-                                       <h3>Implementasi Satu Data Indonesia Dorong Efisiensi Bantuan Sosial di Provinsi DIY</h3>
-                                   </a>
-                                   <p>Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian PPN/Bappenas melaksanakan Kunjungan Kerja Satu Data Indonesia dalam Percepatan Penyelenggaraan Tata Kelola SDI. Kegiatan yang dilaksanakan selama lima hari berturut-turut, sejak Senin hingga Jumat ...</p>
-                                   <div class="news_authorinfo">
-                                       <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti</a></span>
-                                       <span><i class="fa fa-comment"></i> <a href="">Komentar: (0)</a></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <!--Single Blog End-->
-                   <!--Single Blog Start-->
-                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
-                       <div class="news-item">
-                           <div class="news_box">
-                               <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/IMG_0558.JPG" alt=""></div>
-                               <div class="news-content">
-                                   <div class="news_postdate">
-                                       <span>30 Oktober, 2020</span>
-                                   </div>
-                                   <a href="http://114.5.121.197:4000/percepatan-satu-data-indonesia-portal-satu-data-kota-medan-berhasil-diintegrasikan">
-                                       <h3>Percepatan SDI, Portal Sadu Data Kota Medan Berhasil Diintegrasikan</h3>
-                                   </a>
-                                   <p>Manajer Bidang Aplikasi dan Teknologi Sekretariat Satu Data Indonesia (SDI) tingkat Pusat, Epaphras Ericson Thomas menyampaikan bahwa Portal Satu Data Kota Medan (Medan Satu Data) telah terhubung dengan Portal Satu Data Indonesia pada ...</p>
-                                   <div class="news_authorinfo">
-                                       <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti</a></span>
-                                       <span><i class="fa fa-comment"></i> <a href="">Komentar: (0)</a></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <!--Single Blog End-->
-                   <!--Single Blog Start-->
-                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
-                       <div class="news-item">
-                           <div class="news_box">
-                               <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/IMG_0434.JPG" alt=""></div>
-                               <div class="news-content">
-                                   <div class="news_postdate">
-                                       <span>30 Oktober, 2020</span>
-                                   </div>
-                                   <a href="http://114.5.121.197:4000/perpres-satu-data-diyakini-bisa-jadi-solusi-permasalahan-tata-kelola-data-di-medan">
-                                       <h3>PerPres Satu Data Diyakini Bisa Jadi Solusi Permasalahan Tata Kelola Data Di Medan</h3>
-                                   </a>
-                                   <p>Pemerintah Kota Medan meyakini Peraturan Presiden Nomor 39 tahun 2019 tentang Satu Data Indonesia dapat menjadi solusi akan tumpang tindih data dan kesulitan berbagi pakai data yang terjadi antar Organisasi Perangkat Daerah (OPD) di...</p>
-                                   <div class="news_authorinfo">
-                                       <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti</a></span>
-                                       <span><i class="fa fa-comment"></i> <a href="">Komentar: (0)</a></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <!--Single Blog End-->
-                   <!--Single Blog Start-->
-                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
-                       <div class="news-item">
-                           <div class="news_box">
-                               <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/IMG_0168.jpg" alt=""></div>
-                               <div class="news-content">
-                                   <div class="news_postdate">
-                                       <span>07 September, 2020</span>
-                                   </div>
-                                   <a href="http://114.5.121.197:4000/pembahasan-rancangan-permen-organisasi-dan-tata-kerja-sdi">
-                                       <h3>Pembahasan Rancangan PerMen Organisasi dan Tata Kerja SDI</h3>
-                                   </a>
-                                   <p>Dalam rangka memenuhi amanah yang tertuang pada Peraturan Presiden no. 39 tahun 2019 tentang Satu Data Indonesia, Sekretariat Satu Data Indonesia tingkat Pusat mengundang Dewan Pengarah untuk duduk bersama membahas Rancangan Peraturan Menteri PPN/ Bappenas ... </p>
-                                   <div class="news_authorinfo">
-                                       <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti</a></span>
-                                       <span><i class="fa fa-comment"></i> <a href="">Comments: (0)</a></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <!--Single Blog End-->
-                   <!--Single Blog Start-->
-                   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="news-item active">
-                        <div class="news_box">
-                            <div class="newsimg"><img class="img-responsive" src="/static/asset-sdi/berita/Bp. Suharso Monoarfa Menteri PPN.jpg" alt=""></div>
-                            <div class="news-content">
-                                <div class="news_postdate">
-                                    <span>03 Agustus, 2020</span>
-                                </div>
-                                <a href="http://114.5.121.197:4000/sosialisasi-satu-data-indonesia-2020">
-                                    <h3>Sosialisasi Satu Data Indonesia 2020</h3>
-                                </a>
-                                <p>Sekretariat Satu Data Indonesia menggelar Sosialisasi Satu Data Indonesia 2020 secara virtual pada tanggal 3-4 Agustus lalu. Acara yang dihadiri oleh lebih dari 300 perwakilan Instansi Pusat dan Pemerintah Daerah ini bertujuan untuk memberikan pemahaman yang seragam mengenai Kebijakan Satu Data Indonesia (SDI) sebagai salah satu upaya percepatan pelaksanaan kebijakan Satu Data Indonesia.</p>
-                                <div class="news_authorinfo">
-                                    <span><i class="fa fa-user"></i>  <a href="">Anggie Aditya Murti</a></span>
-                                    <span><i class="fa fa-comment"></i> <a href="">Komentar: (0)</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Blog End-->
-               </div>
-           </div>
-       </div>
-</section>
-
+  </div>
   <!-- Subscribe Form -->
-  <div class="subscribe-form text-center"  id="form-for-blog">
-    <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-      <form action="" method="POST">
-        <input type="hidden" name="u" value="d7c1b37384908cd31dbe44d77">
-        <input type="hidden" name="id" value="97878f666d">
-        <div id="mergeTable" class="mergeTable">
+  <!-- <div class="subscribe-form text-center"  id="form-for-blog">
+  <div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+  <form action="" method="POST">
+      <input type="hidden" name="u" value="d7c1b37384908cd31dbe44d77">
+      <input type="hidden" name="id" value="97878f666d">
+      <div id="mergeTable" class="mergeTable">
           <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
               <h3>Subscribe</h3>
               <div class="field-group form-group">
-                  <input type="email" class="form-control  custom-input" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Email Anda..." required  >
+                  <input type="email" class="form-control  custom-input" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Enter Your Email" required  >
+
+
               </div>
           </div>
-        </div>
+      </div>
 
-        <div class="submit_container clear">
+      <div class="submit_container clear">
           <input type="submit" class="formEmailButton btn btn-lg btn-primary" name="submit" value="Subscribe">
-        </div>
-        <input type="hidden" name="ht" value="7e3c30f92918a0476227f6e94f3fe76633002feb:MTUyNTg0Nzk0My44ODk=">
-        <input type="hidden" name="mc_signupsource" value="hosted">
-      </form>
-    </div>
-    </div>
+      </div>
+      <input type="hidden" name="ht" value="7e3c30f92918a0476227f6e94f3fe76633002feb:MTUyNTg0Nzk0My44ODk=">
+      <input type="hidden" name="mc_signupsource" value="hosted">
+  </form>
   </div>
+  </div>
+  </div> -->
+
+  <div class="col-sm-8" id="page-result">
+  
+
+    <!-- Pagination -->
+    {% if post.count > 10 %}
+    {{ utils.pagination(currentPage, totalPages) }}
+    {% endif %}
+    </div>
+    <!-- end of pagination -->
+
 
 </section>
+
+
+
 {% endblock %}
+
